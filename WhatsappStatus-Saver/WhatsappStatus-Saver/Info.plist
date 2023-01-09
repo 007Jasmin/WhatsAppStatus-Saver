@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-3940256099942544~1458002511</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>whatsapp</string>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Poppins-Bold</string>
+		<string>Poppins-Light</string>
+		<string>Poppins-Regular.ttf</string>
+		<string>Poppins-Medium.ttf</string>
+		<string>Poppins-SemiBold.ttf</string>
+		<string>Baloo2-Bold</string>
+		<string>Baloo2-ExtraBold</string>
+		<string>Baloo2-Medium</string>
+		<string>Baloo2-Regular</string>
+		<string>Baloo2-SemiBold</string>
+		<string>DMSans-Bold</string>
+		<string>DMSans-BoldItalic</string>
+		<string>DMSans-Italic</string>
+		<string>DMSans-Medium</string>
+		<string>DMSans-MediumItalic</string>
+		<string>DMSans-Regular</string>
+	</array>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+	</dict>
+</dict>
+</plist>

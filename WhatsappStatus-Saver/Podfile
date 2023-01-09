@@ -1,0 +1,26 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'WhatsappStatus-Saver' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for WhatsappStatus-Saver
+pod 'Google-Mobile-Ads-SDK'
+pod 'RealmSwift'
+pod 'MaterialComponents/Dialogs'
+pod 'MaterialComponents/Dialogs+Theming'
+pod 'SDWebImage'
+pod 'SVProgressHUD'
+pod 'IQKeyboardManagerSwift'
+
+  target 'WhatsappStatus-SaverTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'WhatsappStatus-SaverUITests' do
+    # Pods for testing
+  end
+
+end

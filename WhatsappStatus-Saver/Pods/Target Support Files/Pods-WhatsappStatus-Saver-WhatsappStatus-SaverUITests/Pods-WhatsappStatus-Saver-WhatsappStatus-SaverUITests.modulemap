@@ -1,0 +1,6 @@
+framework module Pods_WhatsappStatus_Saver_WhatsappStatus_SaverUITests {
+  umbrella header "Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

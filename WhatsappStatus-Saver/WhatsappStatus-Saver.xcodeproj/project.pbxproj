@@ -1,0 +1,1083 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B4CA21642993A768F1A86D7 /* Pods_WhatsappStatus_SaverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A0F88F00A7DD07254F6F55 /* Pods_WhatsappStatus_SaverTests.framework */; };
+		BDE14A127782F3515BF4D8FD /* Pods_WhatsappStatus_Saver_WhatsappStatus_SaverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6BE2A49D2AB5111D52BC6D /* Pods_WhatsappStatus_Saver_WhatsappStatus_SaverUITests.framework */; };
+		DD1C04BA295EBDE300056E69 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C04B9295EBDE300056E69 /* SettingsVC.swift */; };
+		DD460BF6296BF07500695621 /* DiskStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD460BF5296BF07500695621 /* DiskStatus.swift */; };
+		DD460BFA296C168400695621 /* CenteredCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD460BF9296C168300695621 /* CenteredCollectionViewFlowLayout.swift */; };
+		DD460BFE296C21F700695621 /* PhotoZoomingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD460BFC296C21F700695621 /* PhotoZoomingView.swift */; };
+		DD460BFF296C21F700695621 /* PhotoZoomingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD460BFD296C21F700695621 /* PhotoZoomingView.xib */; };
+		DD460C01296C443100695621 /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD460C00296C443100695621 /* InfoVC.swift */; };
+		DD47F2C729644FBF00DAFB75 /* FTPopOverMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD47F2BE29644FBE00DAFB75 /* FTPopOverMenuModel.swift */; };
+		DD47F2C829644FBF00DAFB75 /* FTConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD47F2BF29644FBE00DAFB75 /* FTConfiguration.swift */; };
+		DD47F2C929644FBF00DAFB75 /* FTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD47F2C029644FBE00DAFB75 /* FTConstants.swift */; };
+		DD47F2CA29644FBF00DAFB75 /* UIControl+Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD47F2C129644FBE00DAFB75 /* UIControl+Point.swift */; };
+		DD47F2CB29644FBF00DAFB75 /* FTPopOverMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD47F2C229644FBF00DAFB75 /* FTPopOverMenu.swift */; };
+		DD47F2CC29644FBF00DAFB75 /* FT+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD47F2C329644FBF00DAFB75 /* FT+Extension.swift */; };
+		DD47F2CD29644FBF00DAFB75 /* FTPopOverMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD47F2C429644FBF00DAFB75 /* FTPopOverMenuCell.swift */; };
+		DD47F2CF29644FBF00DAFB75 /* UIScreen+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD47F2C629644FBF00DAFB75 /* UIScreen+Frame.swift */; };
+		DD9CEDEF294C849D003DDD7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9CEDEE294C849D003DDD7D /* AppDelegate.swift */; };
+		DD9CEDF3294C849D003DDD7D /* WebWhatsAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9CEDF2294C849D003DDD7D /* WebWhatsAppView.swift */; };
+		DD9CEDF6294C849D003DDD7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9CEDF4294C849D003DDD7D /* Main.storyboard */; };
+		DD9CEDF8294C84A0003DDD7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD9CEDF7294C84A0003DDD7D /* Assets.xcassets */; };
+		DD9CEDFB294C84A0003DDD7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD9CEDF9294C84A0003DDD7D /* LaunchScreen.storyboard */; };
+		DD9CEE06294C84A1003DDD7D /* WhatsappStatus_SaverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9CEE05294C84A1003DDD7D /* WhatsappStatus_SaverTests.swift */; };
+		DD9CEE10294C84A1003DDD7D /* WhatsappStatus_SaverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9CEE0F294C84A1003DDD7D /* WhatsappStatus_SaverUITests.swift */; };
+		DD9CEE12294C84A1003DDD7D /* WhatsappStatus_SaverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9CEE11294C84A1003DDD7D /* WhatsappStatus_SaverUITestsLaunchTests.swift */; };
+		DDAD967F2966F8B900DD7E48 /* KMPlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAD967D2966F8B800DD7E48 /* KMPlaceholderTextView.swift */; };
+		DDC8D9072967FC70004A906C /* In-AppPremiumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC8D9062967FC70004A906C /* In-AppPremiumVC.swift */; };
+		DDC8D90B29683A98004A906C /* DisplayMediaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC8D90A29683A98004A906C /* DisplayMediaVC.swift */; };
+		DDC8D90D29685299004A906C /* PhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC8D90C29685299004A906C /* PhotoHelper.swift */; };
+		DDDF1A02295DC0A4005F89B5 /* GetStartedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF1A01295DC0A4005F89B5 /* GetStartedVC.swift */; };
+		DDDF1A04295DC0DE005F89B5 /* ContinuePolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF1A03295DC0DE005F89B5 /* ContinuePolicyVC.swift */; };
+		DDDF1A06295DC885005F89B5 /* LanguageSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF1A05295DC884005F89B5 /* LanguageSelectionVC.swift */; };
+		DDDF1A09295DCC92005F89B5 /* PrivacyPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF1A08295DCC92005F89B5 /* PrivacyPolicyVC.swift */; };
+		DDE54B5D295C289500AFCD1F /* DirectMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE54B5C295C289500AFCD1F /* DirectMessageVC.swift */; };
+		DDE54B5F295C45D200AFCD1F /* AddContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE54B5E295C45D200AFCD1F /* AddContactVC.swift */; };
+		DDE54B62295C494800AFCD1F /* contactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE54B61295C494800AFCD1F /* contactModel.swift */; };
+		DDE54B68295C4CDE00AFCD1F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE54B66295C4CDD00AFCD1F /* Reachability.swift */; };
+		DDE54B69295C4CDE00AFCD1F /* AdsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE54B67295C4CDE00AFCD1F /* AdsManager.swift */; };
+		DDE54B6B295C4E8B00AFCD1F /* BasicMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE54B6A295C4E8B00AFCD1F /* BasicMethod.swift */; };
+		DDE99CA1296954960091CF7F /* ImageViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE99CA0296954960091CF7F /* ImageViewVC.swift */; };
+		DDF54C9E2962F64700E948FC /* SelectCountryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF54C9D2962F64700E948FC /* SelectCountryCode.swift */; };
+		DDF54CA12962F68C00E948FC /* CountryCodes.json in Resources */ = {isa = PBXBuildFile; fileRef = DDF54CA02962F68C00E948FC /* CountryCodes.json */; };
+		DDF54CA42962FA4D00E948FC /* codesDB.db in Resources */ = {isa = PBXBuildFile; fileRef = DDF54CA22962FA4D00E948FC /* codesDB.db */; };
+		DDF54CA52962FA4D00E948FC /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF54CA32962FA4D00E948FC /* DBHelper.swift */; };
+		DDFF3CD9295974B60046EFA6 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF3CD8295974B60046EFA6 /* HomeVC.swift */; };
+		DDFF3CDB295974C70046EFA6 /* HowToUseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF3CDA295974C70046EFA6 /* HowToUseVC.swift */; };
+		DDFF3CDD295974D40046EFA6 /* MediaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF3CDC295974D40046EFA6 /* MediaView.swift */; };
+		DDFF3CE0295981AF0046EFA6 /* GlobalFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF3CDF295981AF0046EFA6 /* GlobalFile.swift */; };
+		DDFF3CE4295981B90046EFA6 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF3CE3295981B90046EFA6 /* ColorExtension.swift */; };
+		DDFF3CE5295981B90046EFA6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF3CE2295981B80046EFA6 /* Constant.swift */; };
+		DDFF3CE6295981B90046EFA6 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF3CE1295981B80046EFA6 /* Extension.swift */; };
+		DDFF3CE82959829B0046EFA6 /* SplshVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFF3CE72959829B0046EFA6 /* SplshVC.swift */; };
+		FA4CB309FFEDE277F9100E85 /* Pods_WhatsappStatus_Saver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65493ABD9E6906A03FC2A36C /* Pods_WhatsappStatus_Saver.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD9CEE02294C84A1003DDD7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD9CEDE3294C849D003DDD7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD9CEDEA294C849D003DDD7D;
+			remoteInfo = "WhatsappStatus-Saver";
+		};
+		DD9CEE0C294C84A1003DDD7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD9CEDE3294C849D003DDD7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD9CEDEA294C849D003DDD7D;
+			remoteInfo = "WhatsappStatus-Saver";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		361BEB91E24E23492880C471 /* Pods-WhatsappStatus-Saver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappStatus-Saver.debug.xcconfig"; path = "Target Support Files/Pods-WhatsappStatus-Saver/Pods-WhatsappStatus-Saver.debug.xcconfig"; sourceTree = "<group>"; };
+		44BA294B43D20C0B8301A189 /* Pods-WhatsappStatus-Saver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappStatus-Saver.release.xcconfig"; path = "Target Support Files/Pods-WhatsappStatus-Saver/Pods-WhatsappStatus-Saver.release.xcconfig"; sourceTree = "<group>"; };
+		58A0F88F00A7DD07254F6F55 /* Pods_WhatsappStatus_SaverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsappStatus_SaverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58A71F6F96B753ED7A541856 /* Pods-WhatsappStatus-SaverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappStatus-SaverTests.debug.xcconfig"; path = "Target Support Files/Pods-WhatsappStatus-SaverTests/Pods-WhatsappStatus-SaverTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5A6BE2A49D2AB5111D52BC6D /* Pods_WhatsappStatus_Saver_WhatsappStatus_SaverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsappStatus_Saver_WhatsappStatus_SaverUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65493ABD9E6906A03FC2A36C /* Pods_WhatsappStatus_Saver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatsappStatus_Saver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		686391D5D9D9A7EEB4731C73 /* Pods-WhatsappStatus-SaverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappStatus-SaverTests.release.xcconfig"; path = "Target Support Files/Pods-WhatsappStatus-SaverTests/Pods-WhatsappStatus-SaverTests.release.xcconfig"; sourceTree = "<group>"; };
+		8622CBFEEE9F6D7FC8321898 /* Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.debug.xcconfig"; path = "Target Support Files/Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests/Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C4124F24011785575665B931 /* Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.release.xcconfig"; path = "Target Support Files/Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests/Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DD1C04B9295EBDE300056E69 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		DD460BF5296BF07500695621 /* DiskStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskStatus.swift; sourceTree = "<group>"; };
+		DD460BF9296C168300695621 /* CenteredCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteredCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		DD460BFC296C21F700695621 /* PhotoZoomingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoZoomingView.swift; sourceTree = "<group>"; };
+		DD460BFD296C21F700695621 /* PhotoZoomingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoZoomingView.xib; sourceTree = "<group>"; };
+		DD460C00296C443100695621 /* InfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
+		DD47F2BD29644FBE00DAFB75 /* FTPopOverMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPopOverMenu.h; sourceTree = "<group>"; };
+		DD47F2BE29644FBE00DAFB75 /* FTPopOverMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTPopOverMenuModel.swift; sourceTree = "<group>"; };
+		DD47F2BF29644FBE00DAFB75 /* FTConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTConfiguration.swift; sourceTree = "<group>"; };
+		DD47F2C029644FBE00DAFB75 /* FTConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTConstants.swift; sourceTree = "<group>"; };
+		DD47F2C129644FBE00DAFB75 /* UIControl+Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Point.swift"; sourceTree = "<group>"; };
+		DD47F2C229644FBF00DAFB75 /* FTPopOverMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTPopOverMenu.swift; sourceTree = "<group>"; };
+		DD47F2C329644FBF00DAFB75 /* FT+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FT+Extension.swift"; sourceTree = "<group>"; };
+		DD47F2C429644FBF00DAFB75 /* FTPopOverMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTPopOverMenuCell.swift; sourceTree = "<group>"; };
+		DD47F2C529644FBF00DAFB75 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD47F2C629644FBF00DAFB75 /* UIScreen+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Frame.swift"; sourceTree = "<group>"; };
+		DD9CEDEB294C849D003DDD7D /* WhatsappStatus-Saver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WhatsappStatus-Saver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD9CEDEE294C849D003DDD7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DD9CEDF2294C849D003DDD7D /* WebWhatsAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebWhatsAppView.swift; sourceTree = "<group>"; };
+		DD9CEDF5294C849D003DDD7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DD9CEDF7294C84A0003DDD7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD9CEDFA294C84A0003DDD7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DD9CEDFC294C84A0003DDD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD9CEE01294C84A1003DDD7D /* WhatsappStatus-SaverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WhatsappStatus-SaverTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD9CEE05294C84A1003DDD7D /* WhatsappStatus_SaverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappStatus_SaverTests.swift; sourceTree = "<group>"; };
+		DD9CEE0B294C84A1003DDD7D /* WhatsappStatus-SaverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WhatsappStatus-SaverUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD9CEE0F294C84A1003DDD7D /* WhatsappStatus_SaverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappStatus_SaverUITests.swift; sourceTree = "<group>"; };
+		DD9CEE11294C84A1003DDD7D /* WhatsappStatus_SaverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappStatus_SaverUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DDAD967C2966F8B800DD7E48 /* KMPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMPlaceholderTextView.h; sourceTree = "<group>"; };
+		DDAD967D2966F8B800DD7E48 /* KMPlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMPlaceholderTextView.swift; sourceTree = "<group>"; };
+		DDAD967E2966F8B800DD7E48 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDC8D9062967FC70004A906C /* In-AppPremiumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "In-AppPremiumVC.swift"; sourceTree = "<group>"; };
+		DDC8D90A29683A98004A906C /* DisplayMediaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayMediaVC.swift; sourceTree = "<group>"; };
+		DDC8D90C29685299004A906C /* PhotoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoHelper.swift; sourceTree = "<group>"; };
+		DDDF19F0295DB867005F89B5 /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		DDDF19F1295DB867005F89B5 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
+		DDDF19F2295DB868005F89B5 /* Baloo2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Bold.ttf"; sourceTree = "<group>"; };
+		DDDF19F3295DB868005F89B5 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		DDDF19F4295DB868005F89B5 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		DDDF19F5295DB869005F89B5 /* Baloo2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-ExtraBold.ttf"; sourceTree = "<group>"; };
+		DDDF19F6295DB869005F89B5 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		DDDF19F7295DB869005F89B5 /* DMSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		DDDF19F8295DB86A005F89B5 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		DDDF19F9295DB86A005F89B5 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		DDDF19FA295DB86A005F89B5 /* Baloo2-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-SemiBold.ttf"; sourceTree = "<group>"; };
+		DDDF19FB295DB86B005F89B5 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		DDDF19FC295DB86B005F89B5 /* Baloo2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Medium.ttf"; sourceTree = "<group>"; };
+		DDDF19FD295DB86C005F89B5 /* Baloo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo2-Regular.ttf"; sourceTree = "<group>"; };
+		DDDF19FE295DB86C005F89B5 /* DMSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		DDDF19FF295DB86C005F89B5 /* DMSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Italic.ttf"; sourceTree = "<group>"; };
+		DDDF1A01295DC0A4005F89B5 /* GetStartedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedVC.swift; sourceTree = "<group>"; };
+		DDDF1A03295DC0DE005F89B5 /* ContinuePolicyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuePolicyVC.swift; sourceTree = "<group>"; };
+		DDDF1A05295DC884005F89B5 /* LanguageSelectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageSelectionVC.swift; sourceTree = "<group>"; };
+		DDDF1A08295DCC92005F89B5 /* PrivacyPolicyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyVC.swift; sourceTree = "<group>"; };
+		DDE54B5C295C289500AFCD1F /* DirectMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectMessageVC.swift; sourceTree = "<group>"; };
+		DDE54B5E295C45D200AFCD1F /* AddContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactVC.swift; sourceTree = "<group>"; };
+		DDE54B61295C494800AFCD1F /* contactModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = contactModel.swift; sourceTree = "<group>"; };
+		DDE54B66295C4CDD00AFCD1F /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		DDE54B67295C4CDE00AFCD1F /* AdsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsManager.swift; sourceTree = "<group>"; };
+		DDE54B6A295C4E8B00AFCD1F /* BasicMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicMethod.swift; sourceTree = "<group>"; };
+		DDE99CA0296954960091CF7F /* ImageViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewVC.swift; sourceTree = "<group>"; };
+		DDF54C9D2962F64700E948FC /* SelectCountryCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCountryCode.swift; sourceTree = "<group>"; };
+		DDF54CA02962F68C00E948FC /* CountryCodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CountryCodes.json; sourceTree = "<group>"; };
+		DDF54CA22962FA4D00E948FC /* codesDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = codesDB.db; sourceTree = "<group>"; };
+		DDF54CA32962FA4D00E948FC /* DBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		DDFF3CD8295974B60046EFA6 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		DDFF3CDA295974C70046EFA6 /* HowToUseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToUseVC.swift; sourceTree = "<group>"; };
+		DDFF3CDC295974D40046EFA6 /* MediaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaView.swift; sourceTree = "<group>"; };
+		DDFF3CDF295981AF0046EFA6 /* GlobalFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFile.swift; sourceTree = "<group>"; };
+		DDFF3CE1295981B80046EFA6 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		DDFF3CE2295981B80046EFA6 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		DDFF3CE3295981B90046EFA6 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		DDFF3CE72959829B0046EFA6 /* SplshVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplshVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD9CEDE8294C849D003DDD7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA4CB309FFEDE277F9100E85 /* Pods_WhatsappStatus_Saver.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9CEDFE294C84A1003DDD7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B4CA21642993A768F1A86D7 /* Pods_WhatsappStatus_SaverTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9CEE08294C84A1003DDD7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE14A127782F3515BF4D8FD /* Pods_WhatsappStatus_Saver_WhatsappStatus_SaverUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11AE443C02963E560345CF95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65493ABD9E6906A03FC2A36C /* Pods_WhatsappStatus_Saver.framework */,
+				5A6BE2A49D2AB5111D52BC6D /* Pods_WhatsappStatus_Saver_WhatsappStatus_SaverUITests.framework */,
+				58A0F88F00A7DD07254F6F55 /* Pods_WhatsappStatus_SaverTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7492CB525F38FACA8B09618A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				361BEB91E24E23492880C471 /* Pods-WhatsappStatus-Saver.debug.xcconfig */,
+				44BA294B43D20C0B8301A189 /* Pods-WhatsappStatus-Saver.release.xcconfig */,
+				8622CBFEEE9F6D7FC8321898 /* Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.debug.xcconfig */,
+				C4124F24011785575665B931 /* Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.release.xcconfig */,
+				58A71F6F96B753ED7A541856 /* Pods-WhatsappStatus-SaverTests.debug.xcconfig */,
+				686391D5D9D9A7EEB4731C73 /* Pods-WhatsappStatus-SaverTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DD460BFB296C21CD00695621 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				DD460BFC296C21F700695621 /* PhotoZoomingView.swift */,
+				DD460BFD296C21F700695621 /* PhotoZoomingView.xib */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+		DD47F2BB29644FA800DAFB75 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				DDAD967B2966F8B800DD7E48 /* KMPlaceholderTextView */,
+				DD47F2BC29644FBE00DAFB75 /* FTPopOverMenu */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		DD47F2BC29644FBE00DAFB75 /* FTPopOverMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DD47F2BD29644FBE00DAFB75 /* FTPopOverMenu.h */,
+				DD47F2BE29644FBE00DAFB75 /* FTPopOverMenuModel.swift */,
+				DD47F2BF29644FBE00DAFB75 /* FTConfiguration.swift */,
+				DD47F2C029644FBE00DAFB75 /* FTConstants.swift */,
+				DD47F2C129644FBE00DAFB75 /* UIControl+Point.swift */,
+				DD47F2C229644FBF00DAFB75 /* FTPopOverMenu.swift */,
+				DD47F2C329644FBF00DAFB75 /* FT+Extension.swift */,
+				DD47F2C429644FBF00DAFB75 /* FTPopOverMenuCell.swift */,
+				DD47F2C529644FBF00DAFB75 /* Info.plist */,
+				DD47F2C629644FBF00DAFB75 /* UIScreen+Frame.swift */,
+			);
+			path = FTPopOverMenu;
+			sourceTree = "<group>";
+		};
+		DD9CEDE2294C849D003DDD7D = {
+			isa = PBXGroup;
+			children = (
+				DD9CEDED294C849D003DDD7D /* WhatsappStatus-Saver */,
+				DD9CEE04294C84A1003DDD7D /* WhatsappStatus-SaverTests */,
+				DD9CEE0E294C84A1003DDD7D /* WhatsappStatus-SaverUITests */,
+				DD9CEDEC294C849D003DDD7D /* Products */,
+				7492CB525F38FACA8B09618A /* Pods */,
+				11AE443C02963E560345CF95 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DD9CEDEC294C849D003DDD7D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD9CEDEB294C849D003DDD7D /* WhatsappStatus-Saver.app */,
+				DD9CEE01294C84A1003DDD7D /* WhatsappStatus-SaverTests.xctest */,
+				DD9CEE0B294C84A1003DDD7D /* WhatsappStatus-SaverUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD9CEDED294C849D003DDD7D /* WhatsappStatus-Saver */ = {
+			isa = PBXGroup;
+			children = (
+				DD460BFB296C21CD00695621 /* XIB */,
+				DD47F2BB29644FA800DAFB75 /* Library */,
+				DDF54C9F2962F67500E948FC /* Database */,
+				DDDF19EF295DB856005F89B5 /* Font */,
+				DD9CEDF7294C84A0003DDD7D /* Assets.xcassets */,
+				DDE54B65295C4CC500AFCD1F /* AdMobManager */,
+				DDE54B60295C48FE00AFCD1F /* Model */,
+				DDFF3CDE295981A20046EFA6 /* Helper */,
+				DDFF3CD72959748A0046EFA6 /* Controller */,
+				DD9CEDEE294C849D003DDD7D /* AppDelegate.swift */,
+				DD9CEDF4294C849D003DDD7D /* Main.storyboard */,
+				DD9CEDF9294C84A0003DDD7D /* LaunchScreen.storyboard */,
+				DD9CEDFC294C84A0003DDD7D /* Info.plist */,
+			);
+			path = "WhatsappStatus-Saver";
+			sourceTree = "<group>";
+		};
+		DD9CEE04294C84A1003DDD7D /* WhatsappStatus-SaverTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD9CEE05294C84A1003DDD7D /* WhatsappStatus_SaverTests.swift */,
+			);
+			path = "WhatsappStatus-SaverTests";
+			sourceTree = "<group>";
+		};
+		DD9CEE0E294C84A1003DDD7D /* WhatsappStatus-SaverUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DD9CEE0F294C84A1003DDD7D /* WhatsappStatus_SaverUITests.swift */,
+				DD9CEE11294C84A1003DDD7D /* WhatsappStatus_SaverUITestsLaunchTests.swift */,
+			);
+			path = "WhatsappStatus-SaverUITests";
+			sourceTree = "<group>";
+		};
+		DDAD967B2966F8B800DD7E48 /* KMPlaceholderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				DDAD967C2966F8B800DD7E48 /* KMPlaceholderTextView.h */,
+				DDAD967D2966F8B800DD7E48 /* KMPlaceholderTextView.swift */,
+				DDAD967E2966F8B800DD7E48 /* Info.plist */,
+			);
+			path = KMPlaceholderTextView;
+			sourceTree = "<group>";
+		};
+		DDC8D90829683A51004A906C /* Direct Message */ = {
+			isa = PBXGroup;
+			children = (
+				DDF54C9D2962F64700E948FC /* SelectCountryCode.swift */,
+				DDE54B5E295C45D200AFCD1F /* AddContactVC.swift */,
+				DDE54B5C295C289500AFCD1F /* DirectMessageVC.swift */,
+			);
+			path = "Direct Message";
+			sourceTree = "<group>";
+		};
+		DDC8D90929683A79004A906C /* MediaView */ = {
+			isa = PBXGroup;
+			children = (
+				DD460C00296C443100695621 /* InfoVC.swift */,
+				DDFF3CDC295974D40046EFA6 /* MediaView.swift */,
+				DDC8D90A29683A98004A906C /* DisplayMediaVC.swift */,
+				DDE99CA0296954960091CF7F /* ImageViewVC.swift */,
+			);
+			path = MediaView;
+			sourceTree = "<group>";
+		};
+		DDDF19EF295DB856005F89B5 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				DDDF19F2295DB868005F89B5 /* Baloo2-Bold.ttf */,
+				DDDF19F5295DB869005F89B5 /* Baloo2-ExtraBold.ttf */,
+				DDDF19FC295DB86B005F89B5 /* Baloo2-Medium.ttf */,
+				DDDF19FD295DB86C005F89B5 /* Baloo2-Regular.ttf */,
+				DDDF19FA295DB86A005F89B5 /* Baloo2-SemiBold.ttf */,
+				DDDF19F0295DB867005F89B5 /* DMSans-Bold.ttf */,
+				DDDF19FE295DB86C005F89B5 /* DMSans-BoldItalic.ttf */,
+				DDDF19FF295DB86C005F89B5 /* DMSans-Italic.ttf */,
+				DDDF19FB295DB86B005F89B5 /* DMSans-Medium.ttf */,
+				DDDF19F7295DB869005F89B5 /* DMSans-MediumItalic.ttf */,
+				DDDF19F1295DB867005F89B5 /* DMSans-Regular.ttf */,
+				DDDF19F3295DB868005F89B5 /* Poppins-Bold.ttf */,
+				DDDF19F9295DB86A005F89B5 /* Poppins-Light.ttf */,
+				DDDF19F4295DB868005F89B5 /* Poppins-Medium.ttf */,
+				DDDF19F8295DB86A005F89B5 /* Poppins-Regular.ttf */,
+				DDDF19F6295DB869005F89B5 /* Poppins-SemiBold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		DDDF1A00295DC081005F89B5 /* GetStatedNew Group */ = {
+			isa = PBXGroup;
+			children = (
+				DDFF3CE72959829B0046EFA6 /* SplshVC.swift */,
+				DDDF1A05295DC884005F89B5 /* LanguageSelectionVC.swift */,
+				DDDF1A01295DC0A4005F89B5 /* GetStartedVC.swift */,
+				DDDF1A03295DC0DE005F89B5 /* ContinuePolicyVC.swift */,
+			);
+			path = "GetStatedNew Group";
+			sourceTree = "<group>";
+		};
+		DDDF1A07295DCC80005F89B5 /* SettingsVc */ = {
+			isa = PBXGroup;
+			children = (
+				DDC8D9062967FC70004A906C /* In-AppPremiumVC.swift */,
+				DDDF1A08295DCC92005F89B5 /* PrivacyPolicyVC.swift */,
+				DD1C04B9295EBDE300056E69 /* SettingsVC.swift */,
+			);
+			path = SettingsVc;
+			sourceTree = "<group>";
+		};
+		DDE54B60295C48FE00AFCD1F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DDE54B61295C494800AFCD1F /* contactModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DDE54B65295C4CC500AFCD1F /* AdMobManager */ = {
+			isa = PBXGroup;
+			children = (
+				DDE54B67295C4CDE00AFCD1F /* AdsManager.swift */,
+				DDE54B66295C4CDD00AFCD1F /* Reachability.swift */,
+			);
+			path = AdMobManager;
+			sourceTree = "<group>";
+		};
+		DDF54C9F2962F67500E948FC /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				DDF54CA22962FA4D00E948FC /* codesDB.db */,
+				DDF54CA32962FA4D00E948FC /* DBHelper.swift */,
+				DDF54CA02962F68C00E948FC /* CountryCodes.json */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		DDFF3CD72959748A0046EFA6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DDC8D90929683A79004A906C /* MediaView */,
+				DDC8D90829683A51004A906C /* Direct Message */,
+				DDDF1A07295DCC80005F89B5 /* SettingsVc */,
+				DDDF1A00295DC081005F89B5 /* GetStatedNew Group */,
+				DD9CEDF2294C849D003DDD7D /* WebWhatsAppView.swift */,
+				DDFF3CD8295974B60046EFA6 /* HomeVC.swift */,
+				DDFF3CDA295974C70046EFA6 /* HowToUseVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DDFF3CDE295981A20046EFA6 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DD460BF9296C168300695621 /* CenteredCollectionViewFlowLayout.swift */,
+				DD460BF5296BF07500695621 /* DiskStatus.swift */,
+				DDC8D90C29685299004A906C /* PhotoHelper.swift */,
+				DDE54B6A295C4E8B00AFCD1F /* BasicMethod.swift */,
+				DDFF3CE3295981B90046EFA6 /* ColorExtension.swift */,
+				DDFF3CE2295981B80046EFA6 /* Constant.swift */,
+				DDFF3CE1295981B80046EFA6 /* Extension.swift */,
+				DDFF3CDF295981AF0046EFA6 /* GlobalFile.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD9CEDEA294C849D003DDD7D /* WhatsappStatus-Saver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD9CEE15294C84A1003DDD7D /* Build configuration list for PBXNativeTarget "WhatsappStatus-Saver" */;
+			buildPhases = (
+				4D5FADC58E9AE0B73A83F063 /* [CP] Check Pods Manifest.lock */,
+				DD9CEDE7294C849D003DDD7D /* Sources */,
+				DD9CEDE8294C849D003DDD7D /* Frameworks */,
+				DD9CEDE9294C849D003DDD7D /* Resources */,
+				B949CDDEA9323CD276C849A7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WhatsappStatus-Saver";
+			productName = "WhatsappStatus-Saver";
+			productReference = DD9CEDEB294C849D003DDD7D /* WhatsappStatus-Saver.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DD9CEE00294C84A1003DDD7D /* WhatsappStatus-SaverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD9CEE18294C84A1003DDD7D /* Build configuration list for PBXNativeTarget "WhatsappStatus-SaverTests" */;
+			buildPhases = (
+				154BA7FD0E93D55663964C37 /* [CP] Check Pods Manifest.lock */,
+				DD9CEDFD294C84A1003DDD7D /* Sources */,
+				DD9CEDFE294C84A1003DDD7D /* Frameworks */,
+				DD9CEDFF294C84A1003DDD7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD9CEE03294C84A1003DDD7D /* PBXTargetDependency */,
+			);
+			name = "WhatsappStatus-SaverTests";
+			productName = "WhatsappStatus-SaverTests";
+			productReference = DD9CEE01294C84A1003DDD7D /* WhatsappStatus-SaverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DD9CEE0A294C84A1003DDD7D /* WhatsappStatus-SaverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD9CEE1B294C84A1003DDD7D /* Build configuration list for PBXNativeTarget "WhatsappStatus-SaverUITests" */;
+			buildPhases = (
+				F3F78EB3033C6197F6B40AFB /* [CP] Check Pods Manifest.lock */,
+				DD9CEE07294C84A1003DDD7D /* Sources */,
+				DD9CEE08294C84A1003DDD7D /* Frameworks */,
+				DD9CEE09294C84A1003DDD7D /* Resources */,
+				5C7B5811A39D9BC92363E861 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD9CEE0D294C84A1003DDD7D /* PBXTargetDependency */,
+			);
+			name = "WhatsappStatus-SaverUITests";
+			productName = "WhatsappStatus-SaverUITests";
+			productReference = DD9CEE0B294C84A1003DDD7D /* WhatsappStatus-SaverUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD9CEDE3294C849D003DDD7D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					DD9CEDEA294C849D003DDD7D = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					DD9CEE00294C84A1003DDD7D = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = DD9CEDEA294C849D003DDD7D;
+					};
+					DD9CEE0A294C84A1003DDD7D = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = DD9CEDEA294C849D003DDD7D;
+					};
+				};
+			};
+			buildConfigurationList = DD9CEDE6294C849D003DDD7D /* Build configuration list for PBXProject "WhatsappStatus-Saver" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD9CEDE2294C849D003DDD7D;
+			productRefGroup = DD9CEDEC294C849D003DDD7D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD9CEDEA294C849D003DDD7D /* WhatsappStatus-Saver */,
+				DD9CEE00294C84A1003DDD7D /* WhatsappStatus-SaverTests */,
+				DD9CEE0A294C84A1003DDD7D /* WhatsappStatus-SaverUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD9CEDE9294C849D003DDD7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDF54CA42962FA4D00E948FC /* codesDB.db in Resources */,
+				DD9CEDFB294C84A0003DDD7D /* LaunchScreen.storyboard in Resources */,
+				DD9CEDF8294C84A0003DDD7D /* Assets.xcassets in Resources */,
+				DD9CEDF6294C849D003DDD7D /* Main.storyboard in Resources */,
+				DDF54CA12962F68C00E948FC /* CountryCodes.json in Resources */,
+				DD460BFF296C21F700695621 /* PhotoZoomingView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9CEDFF294C84A1003DDD7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9CEE09294C84A1003DDD7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		154BA7FD0E93D55663964C37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatsappStatus-SaverTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D5FADC58E9AE0B73A83F063 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatsappStatus-Saver-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C7B5811A39D9BC92363E861 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests/Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests/Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests/Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B949CDDEA9323CD276C849A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhatsappStatus-Saver/Pods-WhatsappStatus-Saver-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhatsappStatus-Saver/Pods-WhatsappStatus-Saver-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhatsappStatus-Saver/Pods-WhatsappStatus-Saver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3F78EB3033C6197F6B40AFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD9CEDE7294C849D003DDD7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD47F2CB29644FBF00DAFB75 /* FTPopOverMenu.swift in Sources */,
+				DD47F2CC29644FBF00DAFB75 /* FT+Extension.swift in Sources */,
+				DDE54B68295C4CDE00AFCD1F /* Reachability.swift in Sources */,
+				DDDF1A02295DC0A4005F89B5 /* GetStartedVC.swift in Sources */,
+				DD460C01296C443100695621 /* InfoVC.swift in Sources */,
+				DD47F2CD29644FBF00DAFB75 /* FTPopOverMenuCell.swift in Sources */,
+				DDC8D9072967FC70004A906C /* In-AppPremiumVC.swift in Sources */,
+				DDFF3CE6295981B90046EFA6 /* Extension.swift in Sources */,
+				DDFF3CE0295981AF0046EFA6 /* GlobalFile.swift in Sources */,
+				DDF54CA52962FA4D00E948FC /* DBHelper.swift in Sources */,
+				DD460BFA296C168400695621 /* CenteredCollectionViewFlowLayout.swift in Sources */,
+				DDE54B62295C494800AFCD1F /* contactModel.swift in Sources */,
+				DDC8D90B29683A98004A906C /* DisplayMediaVC.swift in Sources */,
+				DDFF3CD9295974B60046EFA6 /* HomeVC.swift in Sources */,
+				DDE54B5D295C289500AFCD1F /* DirectMessageVC.swift in Sources */,
+				DDFF3CE82959829B0046EFA6 /* SplshVC.swift in Sources */,
+				DDE54B69295C4CDE00AFCD1F /* AdsManager.swift in Sources */,
+				DDDF1A04295DC0DE005F89B5 /* ContinuePolicyVC.swift in Sources */,
+				DDDF1A06295DC885005F89B5 /* LanguageSelectionVC.swift in Sources */,
+				DDC8D90D29685299004A906C /* PhotoHelper.swift in Sources */,
+				DD47F2C829644FBF00DAFB75 /* FTConfiguration.swift in Sources */,
+				DDDF1A09295DCC92005F89B5 /* PrivacyPolicyVC.swift in Sources */,
+				DDAD967F2966F8B900DD7E48 /* KMPlaceholderTextView.swift in Sources */,
+				DD9CEDF3294C849D003DDD7D /* WebWhatsAppView.swift in Sources */,
+				DD47F2C729644FBF00DAFB75 /* FTPopOverMenuModel.swift in Sources */,
+				DD460BFE296C21F700695621 /* PhotoZoomingView.swift in Sources */,
+				DDFF3CE5295981B90046EFA6 /* Constant.swift in Sources */,
+				DD47F2C929644FBF00DAFB75 /* FTConstants.swift in Sources */,
+				DDE54B5F295C45D200AFCD1F /* AddContactVC.swift in Sources */,
+				DDFF3CDB295974C70046EFA6 /* HowToUseVC.swift in Sources */,
+				DDFF3CDD295974D40046EFA6 /* MediaView.swift in Sources */,
+				DDF54C9E2962F64700E948FC /* SelectCountryCode.swift in Sources */,
+				DDFF3CE4295981B90046EFA6 /* ColorExtension.swift in Sources */,
+				DD47F2CF29644FBF00DAFB75 /* UIScreen+Frame.swift in Sources */,
+				DDE99CA1296954960091CF7F /* ImageViewVC.swift in Sources */,
+				DD9CEDEF294C849D003DDD7D /* AppDelegate.swift in Sources */,
+				DD460BF6296BF07500695621 /* DiskStatus.swift in Sources */,
+				DDE54B6B295C4E8B00AFCD1F /* BasicMethod.swift in Sources */,
+				DD1C04BA295EBDE300056E69 /* SettingsVC.swift in Sources */,
+				DD47F2CA29644FBF00DAFB75 /* UIControl+Point.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9CEDFD294C84A1003DDD7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD9CEE06294C84A1003DDD7D /* WhatsappStatus_SaverTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9CEE07294C84A1003DDD7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD9CEE12294C84A1003DDD7D /* WhatsappStatus_SaverUITestsLaunchTests.swift in Sources */,
+				DD9CEE10294C84A1003DDD7D /* WhatsappStatus_SaverUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD9CEE03294C84A1003DDD7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD9CEDEA294C849D003DDD7D /* WhatsappStatus-Saver */;
+			targetProxy = DD9CEE02294C84A1003DDD7D /* PBXContainerItemProxy */;
+		};
+		DD9CEE0D294C84A1003DDD7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD9CEDEA294C849D003DDD7D /* WhatsappStatus-Saver */;
+			targetProxy = DD9CEE0C294C84A1003DDD7D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DD9CEDF4294C849D003DDD7D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD9CEDF5294C849D003DDD7D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DD9CEDF9294C84A0003DDD7D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD9CEDFA294C84A0003DDD7D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD9CEE13294C84A1003DDD7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DD9CEE14294C84A1003DDD7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD9CEE16294C84A1003DDD7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 361BEB91E24E23492880C471 /* Pods-WhatsappStatus-Saver.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = F3R3ZAMKDM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WhatsappStatus-Saver/Info.plist";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "To access device files for upload upon user request";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires access to the photo library.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.erasoft.StatusSaverApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = WhatsAppApp_Development_Jan_2023;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD9CEE17294C84A1003DDD7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44BA294B43D20C0B8301A189 /* Pods-WhatsappStatus-Saver.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = F3R3ZAMKDM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WhatsappStatus-Saver/Info.plist";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "To access device files for upload upon user request";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires access to the photo library.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.erasoft.StatusSaverApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = WhatsAppApp_Distribution_Jan_2023;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DD9CEE19294C84A1003DDD7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58A71F6F96B753ED7A541856 /* Pods-WhatsappStatus-SaverTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.erasoft.WhatsappStatus-SaverTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhatsappStatus-Saver.app/WhatsappStatus-Saver";
+			};
+			name = Debug;
+		};
+		DD9CEE1A294C84A1003DDD7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 686391D5D9D9A7EEB4731C73 /* Pods-WhatsappStatus-SaverTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.erasoft.WhatsappStatus-SaverTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhatsappStatus-Saver.app/WhatsappStatus-Saver";
+			};
+			name = Release;
+		};
+		DD9CEE1C294C84A1003DDD7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8622CBFEEE9F6D7FC8321898 /* Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.erasoft.WhatsappStatus-SaverUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "WhatsappStatus-Saver";
+			};
+			name = Debug;
+		};
+		DD9CEE1D294C84A1003DDD7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4124F24011785575665B931 /* Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.erasoft.WhatsappStatus-SaverUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "WhatsappStatus-Saver";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD9CEDE6294C849D003DDD7D /* Build configuration list for PBXProject "WhatsappStatus-Saver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD9CEE13294C84A1003DDD7D /* Debug */,
+				DD9CEE14294C84A1003DDD7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD9CEE15294C84A1003DDD7D /* Build configuration list for PBXNativeTarget "WhatsappStatus-Saver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD9CEE16294C84A1003DDD7D /* Debug */,
+				DD9CEE17294C84A1003DDD7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD9CEE18294C84A1003DDD7D /* Build configuration list for PBXNativeTarget "WhatsappStatus-SaverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD9CEE19294C84A1003DDD7D /* Debug */,
+				DD9CEE1A294C84A1003DDD7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD9CEE1B294C84A1003DDD7D /* Build configuration list for PBXNativeTarget "WhatsappStatus-SaverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD9CEE1C294C84A1003DDD7D /* Debug */,
+				DD9CEE1D294C84A1003DDD7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD9CEDE3294C849D003DDD7D /* Project object */;
+}
