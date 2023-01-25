@@ -18,6 +18,7 @@ class SelectCountryCode: UIViewController {
     
     @IBOutlet var tblCountryCode: UITableView!
     @IBOutlet var txtSearchBar: UITextField!
+    @IBOutlet var lblHeader: UILabel!
     
     var arrCountryList:NSArray = []
     var filtterArrCountryList:NSArray = []// = [[String : Any]]()
@@ -29,6 +30,17 @@ class SelectCountryCode: UIViewController {
         txtSearchBar.delegate = self
         filtterArrCountryList = []
         self.fetchData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.lblHeader.text = "Search Country".localized
+        self.txtSearchBar.placeholder = "Search Country".localized
+        self.txtSearchBar.isUserInteractionEnabled = true
+        if Defaults.bool(forKey: "KeyboardDisable") == true
+        {
+            self.txtSearchBar.isUserInteractionEnabled = false
+        }
     }
     
 }

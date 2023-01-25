@@ -13,6 +13,7 @@ pod 'MaterialComponents/Dialogs+Theming'
 pod 'SDWebImage'
 pod 'SVProgressHUD'
 pod 'IQKeyboardManagerSwift'
+pod 'SwiftyStoreKit'
 
   target 'WhatsappStatus-SaverTests' do
     inherit! :search_paths

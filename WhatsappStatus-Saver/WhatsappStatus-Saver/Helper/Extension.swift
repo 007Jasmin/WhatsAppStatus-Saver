@@ -9,10 +9,36 @@ import Foundation
 import UIKit
 
 extension String {
+    
+    var localized: String {
+        if let _ = UserDefaults.standard.string(forKey: "LangCode") {} else {
+            // we set a default, just in case
+            UserDefaults.standard.set("en", forKey: "LangCode")
+            UserDefaults.standard.synchronize()
+        }
+        
+        let lang = UserDefaults.standard.string(forKey: "LangCode")
+        
+        let path = Bundle.main.path(forResource: lang, ofType: "lproj")
+        let bundle = Bundle(path: path!)
+        
+        return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
+    }
+    
     func localizeString(string: String) -> String {
         let path = Bundle.main.path(forResource: string, ofType: "lproj")
         let bundle = Bundle(path: path!)
         return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
+    }
+    
+    public var validPhoneNumber: Bool {
+        let types: NSTextCheckingResult.CheckingType = [.phoneNumber]
+        guard let detector = try? NSDataDetector(types: types.rawValue) else { return false }
+        if let match = detector.matches(in: self, options: [], range: NSMakeRange(0, self.count)).first?.phoneNumber {
+            return match == self
+        } else {
+            return false
+        }
     }
 }
 
@@ -195,6 +221,12 @@ extension UIDevice {
     }
 }
 extension UIView {
+    
+    func addHeaderRadius(_ cornerRadius:Int)
+    {
+        self.layer.cornerRadius = CGFloat(cornerRadius)
+        self.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMinXMinYCorner]
+    }
     
     enum Direction: Int {
         case topToBottom = 0

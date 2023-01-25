@@ -15,7 +15,7 @@ class PrivacyPolicyVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        lblHeader.text = "Privacy Policy"//.localizeString(string: langVal)
+        lblHeader.text = "Privacy Policy".localized
         if let urlVal = URL(string: PRIVACYPOLICY)
         {
             let rqeURL = URLRequest(url: urlVal)

@@ -9,7 +9,18 @@
 /* Begin PBXBuildFile section */
 		1B4CA21642993A768F1A86D7 /* Pods_WhatsappStatus_SaverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A0F88F00A7DD07254F6F55 /* Pods_WhatsappStatus_SaverTests.framework */; };
 		BDE14A127782F3515BF4D8FD /* Pods_WhatsappStatus_Saver_WhatsappStatus_SaverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6BE2A49D2AB5111D52BC6D /* Pods_WhatsappStatus_Saver_WhatsappStatus_SaverUITests.framework */; };
+		DD0259CB2978154E0050700A /* ExitAppVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0259CA2978154E0050700A /* ExitAppVC.swift */; };
+		DD173055297916A3004632DF /* FloatRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD173054297916A3004632DF /* FloatRatingView.swift */; };
+		DD17305729791A5E004632DF /* RatingVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17305629791A5E004632DF /* RatingVc.swift */; };
+		DD17305D29795074004632DF /* InAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17305C29795074004632DF /* InAppManager.swift */; };
 		DD1C04BA295EBDE300056E69 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1C04B9295EBDE300056E69 /* SettingsVC.swift */; };
+		DD3B9AD9296E8BFA000FCBD3 /* VideoViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B9AD8296E8BFA000FCBD3 /* VideoViewVC.swift */; };
+		DD3B9ADD296ECAE6000FCBD3 /* RRCircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B9ADC296ECAE6000FCBD3 /* RRCircularView.swift */; };
+		DD3B9ADF296ECE40000FCBD3 /* CircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B9ADE296ECE3F000FCBD3 /* CircularSlider.swift */; };
+		DD3B9AE5296ECF5E000FCBD3 /* CircularSliderHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B9AE1296ECF5D000FCBD3 /* CircularSliderHandle.swift */; };
+		DD3B9AE6296ECF5E000FCBD3 /* DoubleHandleCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B9AE2296ECF5D000FCBD3 /* DoubleHandleCircularSlider.swift */; };
+		DD3B9AE7296ECF5E000FCBD3 /* CircularTrig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B9AE3296ECF5E000FCBD3 /* CircularTrig.swift */; };
+		DD3B9AE8296ECF5E000FCBD3 /* GradientCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B9AE4296ECF5E000FCBD3 /* GradientCircularSlider.swift */; };
 		DD460BF6296BF07500695621 /* DiskStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD460BF5296BF07500695621 /* DiskStatus.swift */; };
 		DD460BFA296C168400695621 /* CenteredCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD460BF9296C168300695621 /* CenteredCollectionViewFlowLayout.swift */; };
 		DD460BFE296C21F700695621 /* PhotoZoomingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD460BFC296C21F700695621 /* PhotoZoomingView.swift */; };
@@ -31,6 +42,7 @@
 		DD9CEE06294C84A1003DDD7D /* WhatsappStatus_SaverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9CEE05294C84A1003DDD7D /* WhatsappStatus_SaverTests.swift */; };
 		DD9CEE10294C84A1003DDD7D /* WhatsappStatus_SaverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9CEE0F294C84A1003DDD7D /* WhatsappStatus_SaverUITests.swift */; };
 		DD9CEE12294C84A1003DDD7D /* WhatsappStatus_SaverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9CEE11294C84A1003DDD7D /* WhatsappStatus_SaverUITestsLaunchTests.swift */; };
+		DDA76759297146540082A0DA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDA7675B297146540082A0DA /* Localizable.strings */; };
 		DDAD967F2966F8B900DD7E48 /* KMPlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAD967D2966F8B800DD7E48 /* KMPlaceholderTextView.swift */; };
 		DDC8D9072967FC70004A906C /* In-AppPremiumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC8D9062967FC70004A906C /* In-AppPremiumVC.swift */; };
 		DDC8D90B29683A98004A906C /* DisplayMediaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC8D90A29683A98004A906C /* DisplayMediaVC.swift */; };
@@ -88,7 +100,18 @@
 		686391D5D9D9A7EEB4731C73 /* Pods-WhatsappStatus-SaverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappStatus-SaverTests.release.xcconfig"; path = "Target Support Files/Pods-WhatsappStatus-SaverTests/Pods-WhatsappStatus-SaverTests.release.xcconfig"; sourceTree = "<group>"; };
 		8622CBFEEE9F6D7FC8321898 /* Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.debug.xcconfig"; path = "Target Support Files/Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests/Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4124F24011785575665B931 /* Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.release.xcconfig"; path = "Target Support Files/Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests/Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DD0259CA2978154E0050700A /* ExitAppVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitAppVC.swift; sourceTree = "<group>"; };
+		DD173054297916A3004632DF /* FloatRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatRatingView.swift; sourceTree = "<group>"; };
+		DD17305629791A5E004632DF /* RatingVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingVc.swift; sourceTree = "<group>"; };
+		DD17305C29795074004632DF /* InAppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppManager.swift; sourceTree = "<group>"; };
 		DD1C04B9295EBDE300056E69 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		DD3B9AD8296E8BFA000FCBD3 /* VideoViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewVC.swift; sourceTree = "<group>"; };
+		DD3B9ADC296ECAE6000FCBD3 /* RRCircularView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RRCircularView.swift; sourceTree = "<group>"; };
+		DD3B9ADE296ECE3F000FCBD3 /* CircularSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularSlider.swift; sourceTree = "<group>"; };
+		DD3B9AE1296ECF5D000FCBD3 /* CircularSliderHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularSliderHandle.swift; sourceTree = "<group>"; };
+		DD3B9AE2296ECF5D000FCBD3 /* DoubleHandleCircularSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleHandleCircularSlider.swift; sourceTree = "<group>"; };
+		DD3B9AE3296ECF5E000FCBD3 /* CircularTrig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularTrig.swift; sourceTree = "<group>"; };
+		DD3B9AE4296ECF5E000FCBD3 /* GradientCircularSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientCircularSlider.swift; sourceTree = "<group>"; };
 		DD460BF5296BF07500695621 /* DiskStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskStatus.swift; sourceTree = "<group>"; };
 		DD460BF9296C168300695621 /* CenteredCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteredCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		DD460BFC296C21F700695621 /* PhotoZoomingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoZoomingView.swift; sourceTree = "<group>"; };
@@ -116,6 +139,12 @@
 		DD9CEE0B294C84A1003DDD7D /* WhatsappStatus-SaverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WhatsappStatus-SaverUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9CEE0F294C84A1003DDD7D /* WhatsappStatus_SaverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappStatus_SaverUITests.swift; sourceTree = "<group>"; };
 		DD9CEE11294C84A1003DDD7D /* WhatsappStatus_SaverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappStatus_SaverUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DDA7675A297146540082A0DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DDA7675C297146570082A0DA /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DDA7675D297146570082A0DA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DDA7675E297146580082A0DA /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DDA7675F297146580082A0DA /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DDA76760297146590082A0DA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DDAD967C2966F8B800DD7E48 /* KMPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMPlaceholderTextView.h; sourceTree = "<group>"; };
 		DDAD967D2966F8B800DD7E48 /* KMPlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KMPlaceholderTextView.swift; sourceTree = "<group>"; };
 		DDAD967E2966F8B800DD7E48 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -214,6 +243,83 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DD17305329791686004632DF /* FloatRatingView */ = {
+			isa = PBXGroup;
+			children = (
+				DD173054297916A3004632DF /* FloatRatingView.swift */,
+			);
+			path = FloatRatingView;
+			sourceTree = "<group>";
+		};
+		DD17305829794E49004632DF /* AppConfig */ = {
+			isa = PBXGroup;
+			children = (
+				DD9CEDF7294C84A0003DDD7D /* Assets.xcassets */,
+				DD9CEDEE294C849D003DDD7D /* AppDelegate.swift */,
+				DD9CEDFC294C84A0003DDD7D /* Info.plist */,
+			);
+			path = AppConfig;
+			sourceTree = "<group>";
+		};
+		DD17305929794E6F004632DF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DD9CEDF4294C849D003DDD7D /* Main.storyboard */,
+				DD9CEDF9294C84A0003DDD7D /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		DD17305A29794EA6004632DF /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				DD17305B29795041004632DF /* In-App Purchase Manager */,
+				DD47F2BB29644FA800DAFB75 /* Library */,
+				DDF54C9F2962F67500E948FC /* Database */,
+				DDDF19EF295DB856005F89B5 /* Font */,
+				DDE54B65295C4CC500AFCD1F /* AdMobManager */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		DD17305B29795041004632DF /* In-App Purchase Manager */ = {
+			isa = PBXGroup;
+			children = (
+				DD17305C29795074004632DF /* InAppManager.swift */,
+			);
+			path = "In-App Purchase Manager";
+			sourceTree = "<group>";
+		};
+		DD17305E297950EE004632DF /* WebScan */ = {
+			isa = PBXGroup;
+			children = (
+				DD9CEDF2294C849D003DDD7D /* WebWhatsAppView.swift */,
+				DDFF3CDA295974C70046EFA6 /* HowToUseVC.swift */,
+			);
+			path = WebScan;
+			sourceTree = "<group>";
+		};
+		DD17305F29795100004632DF /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				DD0259CA2978154E0050700A /* ExitAppVC.swift */,
+				DDFF3CD8295974B60046EFA6 /* HomeVC.swift */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		DD3B9AE0296ECF30000FCBD3 /* CircularSlider */ = {
+			isa = PBXGroup;
+			children = (
+				DD3B9AE1296ECF5D000FCBD3 /* CircularSliderHandle.swift */,
+				DD3B9AE3296ECF5E000FCBD3 /* CircularTrig.swift */,
+				DD3B9AE2296ECF5D000FCBD3 /* DoubleHandleCircularSlider.swift */,
+				DD3B9AE4296ECF5E000FCBD3 /* GradientCircularSlider.swift */,
+				DD3B9ADE296ECE3F000FCBD3 /* CircularSlider.swift */,
+			);
+			path = CircularSlider;
+			sourceTree = "<group>";
+		};
 		DD460BFB296C21CD00695621 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +332,9 @@
 		DD47F2BB29644FA800DAFB75 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				DD17305329791686004632DF /* FloatRatingView */,
+				DD3B9AE0296ECF30000FCBD3 /* CircularSlider */,
+				DD3B9ADC296ECAE6000FCBD3 /* RRCircularView.swift */,
 				DDAD967B2966F8B800DD7E48 /* KMPlaceholderTextView */,
 				DD47F2BC29644FBE00DAFB75 /* FTPopOverMenu */,
 			);
@@ -274,19 +383,14 @@
 		DD9CEDED294C849D003DDD7D /* WhatsappStatus-Saver */ = {
 			isa = PBXGroup;
 			children = (
+				DD17305A29794EA6004632DF /* Resource */,
+				DD17305929794E6F004632DF /* UI */,
+				DD17305829794E49004632DF /* AppConfig */,
+				DDA76756297140B00082A0DA /* Localization */,
 				DD460BFB296C21CD00695621 /* XIB */,
-				DD47F2BB29644FA800DAFB75 /* Library */,
-				DDF54C9F2962F67500E948FC /* Database */,
-				DDDF19EF295DB856005F89B5 /* Font */,
-				DD9CEDF7294C84A0003DDD7D /* Assets.xcassets */,
-				DDE54B65295C4CC500AFCD1F /* AdMobManager */,
 				DDE54B60295C48FE00AFCD1F /* Model */,
 				DDFF3CDE295981A20046EFA6 /* Helper */,
 				DDFF3CD72959748A0046EFA6 /* Controller */,
-				DD9CEDEE294C849D003DDD7D /* AppDelegate.swift */,
-				DD9CEDF4294C849D003DDD7D /* Main.storyboard */,
-				DD9CEDF9294C84A0003DDD7D /* LaunchScreen.storyboard */,
-				DD9CEDFC294C84A0003DDD7D /* Info.plist */,
 			);
 			path = "WhatsappStatus-Saver";
 			sourceTree = "<group>";
@@ -306,6 +410,14 @@
 				DD9CEE11294C84A1003DDD7D /* WhatsappStatus_SaverUITestsLaunchTests.swift */,
 			);
 			path = "WhatsappStatus-SaverUITests";
+			sourceTree = "<group>";
+		};
+		DDA76756297140B00082A0DA /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				DDA7675B297146540082A0DA /* Localizable.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		DDAD967B2966F8B800DD7E48 /* KMPlaceholderTextView */ = {
@@ -335,6 +447,7 @@
 				DDFF3CDC295974D40046EFA6 /* MediaView.swift */,
 				DDC8D90A29683A98004A906C /* DisplayMediaVC.swift */,
 				DDE99CA0296954960091CF7F /* ImageViewVC.swift */,
+				DD3B9AD8296E8BFA000FCBD3 /* VideoViewVC.swift */,
 			);
 			path = MediaView;
 			sourceTree = "<group>";
@@ -362,7 +475,7 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
-		DDDF1A00295DC081005F89B5 /* GetStatedNew Group */ = {
+		DDDF1A00295DC081005F89B5 /* GetStated */ = {
 			isa = PBXGroup;
 			children = (
 				DDFF3CE72959829B0046EFA6 /* SplshVC.swift */,
@@ -370,7 +483,7 @@
 				DDDF1A01295DC0A4005F89B5 /* GetStartedVC.swift */,
 				DDDF1A03295DC0DE005F89B5 /* ContinuePolicyVC.swift */,
 			);
-			path = "GetStatedNew Group";
+			path = GetStated;
 			sourceTree = "<group>";
 		};
 		DDDF1A07295DCC80005F89B5 /* SettingsVc */ = {
@@ -379,6 +492,7 @@
 				DDC8D9062967FC70004A906C /* In-AppPremiumVC.swift */,
 				DDDF1A08295DCC92005F89B5 /* PrivacyPolicyVC.swift */,
 				DD1C04B9295EBDE300056E69 /* SettingsVC.swift */,
+				DD17305629791A5E004632DF /* RatingVc.swift */,
 			);
 			path = SettingsVc;
 			sourceTree = "<group>";
@@ -413,13 +527,12 @@
 		DDFF3CD72959748A0046EFA6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DD17305F29795100004632DF /* HomeVC */,
+				DD17305E297950EE004632DF /* WebScan */,
 				DDC8D90929683A79004A906C /* MediaView */,
 				DDC8D90829683A51004A906C /* Direct Message */,
 				DDDF1A07295DCC80005F89B5 /* SettingsVc */,
-				DDDF1A00295DC081005F89B5 /* GetStatedNew Group */,
-				DD9CEDF2294C849D003DDD7D /* WebWhatsAppView.swift */,
-				DDFF3CD8295974B60046EFA6 /* HomeVC.swift */,
-				DDFF3CDA295974C70046EFA6 /* HowToUseVC.swift */,
+				DDDF1A00295DC081005F89B5 /* GetStated */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -530,6 +643,11 @@
 			knownRegions = (
 				en,
 				Base,
+				nl,
+				fr,
+				it,
+				es,
+				pt,
 			);
 			mainGroup = DD9CEDE2294C849D003DDD7D;
 			productRefGroup = DD9CEDEC294C849D003DDD7D /* Products */;
@@ -551,6 +669,7 @@
 				DDF54CA42962FA4D00E948FC /* codesDB.db in Resources */,
 				DD9CEDFB294C84A0003DDD7D /* LaunchScreen.storyboard in Resources */,
 				DD9CEDF8294C84A0003DDD7D /* Assets.xcassets in Resources */,
+				DDA76759297146540082A0DA /* Localizable.strings in Resources */,
 				DD9CEDF6294C849D003DDD7D /* Main.storyboard in Resources */,
 				DDF54CA12962F68C00E948FC /* CountryCodes.json in Resources */,
 				DD460BFF296C21F700695621 /* PhotoZoomingView.xib in Resources */,
@@ -682,16 +801,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD47F2CB29644FBF00DAFB75 /* FTPopOverMenu.swift in Sources */,
+				DD17305D29795074004632DF /* InAppManager.swift in Sources */,
 				DD47F2CC29644FBF00DAFB75 /* FT+Extension.swift in Sources */,
 				DDE54B68295C4CDE00AFCD1F /* Reachability.swift in Sources */,
 				DDDF1A02295DC0A4005F89B5 /* GetStartedVC.swift in Sources */,
+				DD3B9ADF296ECE40000FCBD3 /* CircularSlider.swift in Sources */,
+				DD3B9AE5296ECF5E000FCBD3 /* CircularSliderHandle.swift in Sources */,
 				DD460C01296C443100695621 /* InfoVC.swift in Sources */,
 				DD47F2CD29644FBF00DAFB75 /* FTPopOverMenuCell.swift in Sources */,
 				DDC8D9072967FC70004A906C /* In-AppPremiumVC.swift in Sources */,
 				DDFF3CE6295981B90046EFA6 /* Extension.swift in Sources */,
 				DDFF3CE0295981AF0046EFA6 /* GlobalFile.swift in Sources */,
+				DD3B9AE6296ECF5E000FCBD3 /* DoubleHandleCircularSlider.swift in Sources */,
 				DDF54CA52962FA4D00E948FC /* DBHelper.swift in Sources */,
 				DD460BFA296C168400695621 /* CenteredCollectionViewFlowLayout.swift in Sources */,
+				DD0259CB2978154E0050700A /* ExitAppVC.swift in Sources */,
 				DDE54B62295C494800AFCD1F /* contactModel.swift in Sources */,
 				DDC8D90B29683A98004A906C /* DisplayMediaVC.swift in Sources */,
 				DDFF3CD9295974B60046EFA6 /* HomeVC.swift in Sources */,
@@ -700,19 +824,25 @@
 				DDE54B69295C4CDE00AFCD1F /* AdsManager.swift in Sources */,
 				DDDF1A04295DC0DE005F89B5 /* ContinuePolicyVC.swift in Sources */,
 				DDDF1A06295DC885005F89B5 /* LanguageSelectionVC.swift in Sources */,
+				DD173055297916A3004632DF /* FloatRatingView.swift in Sources */,
 				DDC8D90D29685299004A906C /* PhotoHelper.swift in Sources */,
 				DD47F2C829644FBF00DAFB75 /* FTConfiguration.swift in Sources */,
+				DD3B9ADD296ECAE6000FCBD3 /* RRCircularView.swift in Sources */,
 				DDDF1A09295DCC92005F89B5 /* PrivacyPolicyVC.swift in Sources */,
 				DDAD967F2966F8B900DD7E48 /* KMPlaceholderTextView.swift in Sources */,
+				DD3B9AE8296ECF5E000FCBD3 /* GradientCircularSlider.swift in Sources */,
 				DD9CEDF3294C849D003DDD7D /* WebWhatsAppView.swift in Sources */,
 				DD47F2C729644FBF00DAFB75 /* FTPopOverMenuModel.swift in Sources */,
 				DD460BFE296C21F700695621 /* PhotoZoomingView.swift in Sources */,
+				DD3B9AE7296ECF5E000FCBD3 /* CircularTrig.swift in Sources */,
 				DDFF3CE5295981B90046EFA6 /* Constant.swift in Sources */,
 				DD47F2C929644FBF00DAFB75 /* FTConstants.swift in Sources */,
 				DDE54B5F295C45D200AFCD1F /* AddContactVC.swift in Sources */,
+				DD17305729791A5E004632DF /* RatingVc.swift in Sources */,
 				DDFF3CDB295974C70046EFA6 /* HowToUseVC.swift in Sources */,
 				DDFF3CDD295974D40046EFA6 /* MediaView.swift in Sources */,
 				DDF54C9E2962F64700E948FC /* SelectCountryCode.swift in Sources */,
+				DD3B9AD9296E8BFA000FCBD3 /* VideoViewVC.swift in Sources */,
 				DDFF3CE4295981B90046EFA6 /* ColorExtension.swift in Sources */,
 				DD47F2CF29644FBF00DAFB75 /* UIScreen+Frame.swift in Sources */,
 				DDE99CA1296954960091CF7F /* ImageViewVC.swift in Sources */,
@@ -773,6 +903,19 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		DDA7675B297146540082A0DA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DDA7675A297146540082A0DA /* en */,
+				DDA7675C297146570082A0DA /* nl */,
+				DDA7675D297146570082A0DA /* fr */,
+				DDA7675E297146580082A0DA /* it */,
+				DDA7675F297146580082A0DA /* pt */,
+				DDA76760297146590082A0DA /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -780,6 +923,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -840,6 +984,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -902,7 +1047,7 @@
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = F3R3ZAMKDM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "WhatsappStatus-Saver/Info.plist";
+				INFOPLIST_FILE = "WhatsappStatus-Saver/AppConfig/Info.plist";
 				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "To access device files for upload upon user request";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires access to the photo library.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -938,7 +1083,7 @@
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = F3R3ZAMKDM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "WhatsappStatus-Saver/Info.plist";
+				INFOPLIST_FILE = "WhatsappStatus-Saver/AppConfig/Info.plist";
 				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "To access device files for upload upon user request";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires access to the photo library.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

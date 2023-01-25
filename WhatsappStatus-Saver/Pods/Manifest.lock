@@ -167,6 +167,7 @@ PODS:
     - SDWebImage/Core (= 5.14.2)
   - SDWebImage/Core (5.14.2)
   - SVProgressHUD (2.2.5)
+  - SwiftyStoreKit (0.16.1)
 
 DEPENDENCIES:
   - Google-Mobile-Ads-SDK
@@ -176,6 +177,7 @@ DEPENDENCIES:
   - RealmSwift
   - SDWebImage
   - SVProgressHUD
+  - SwiftyStoreKit
 
 SPEC REPOS:
   trunk:
@@ -193,6 +195,7 @@ SPEC REPOS:
     - RealmSwift
     - SDWebImage
     - SVProgressHUD
+    - SwiftyStoreKit
 
 SPEC CHECKSUMS:
   Google-Mobile-Ads-SDK: 4fe6304b771f8467d29978cb790ec1e56e646946
@@ -209,7 +212,8 @@ SPEC CHECKSUMS:
   RealmSwift: cef9946f09f2333a8f2ac8bac4f8de52fb9f5ac3
   SDWebImage: b9a731e1d6307f44ca703b3976d18c24ca561e84
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
 
-PODFILE CHECKSUM: d4dff73d0a6523adefe174a28543ca149b358d46
+PODFILE CHECKSUM: e41f7241d85b6b78c617430d564b1b05db8c9243
 
 COCOAPODS: 1.11.3

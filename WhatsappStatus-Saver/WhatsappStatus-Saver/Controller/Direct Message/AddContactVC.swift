@@ -29,6 +29,7 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     @IBOutlet weak var txtemail: UITextField!
     @IBOutlet weak var imgcurrentlogin: UIImageView!
     @IBOutlet weak var lblsavename: UILabel!
+    @IBOutlet weak var lblsaveTo: UILabel!
     @IBOutlet weak var btndevice: UIButton!
     @IBOutlet weak var nativeAdPlaceholder: GADNativeAdView!
     @IBOutlet weak var callToActionView: UIButton!
@@ -50,9 +51,12 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let tapgesture = UITapGestureRecognizer.init(target: self, action: #selector(onImageTapAction(gesture:)))
-//        self.imgprofile.addGestureRecognizer(tapgesture)
-//        self.imgprofile.isUserInteractionEnabled = true
+        //        let tapgesture = UITapGestureRecognizer.init(target: self, action: #selector(onImageTapAction(gesture:)))
+        //        self.imgprofile.addGestureRecognizer(tapgesture)
+        //        self.imgprofile.isUserInteractionEnabled = true
+        
+        
+        
         
         self.txtphone.delegate = self
         self.txtemail.delegate = self
@@ -74,11 +78,11 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         }
         
         if self.isEditMode{
-            self.lbltitle.text = "Update Contact"
-            self.btnsave.setTitle("Update", for: .normal)
+            self.lbltitle.text = "Update Contact".localized
+            self.btnsave.setTitle("Update".localized, for: .normal)
         }else{
-            self.lbltitle.text = "Create Contact"
-            self.btnsave.setTitle("Save", for: .normal)
+            self.lbltitle.text = "Create Contact".localized
+            self.btnsave.setTitle("Save".localized, for: .normal)
         }
         
         if let activeaccountArr = Array(realm.objects(accountModel.self).filter({ $0.isActiveLogin == true })).first
@@ -91,7 +95,7 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
             }
             else{
                 self.imgcurrentlogin.image = UIImage.init(named: "icon_device")
-                self.lblsavename.text = "Device"
+                self.lblsavename.text = "Device".localized
             }
             
         }
@@ -99,72 +103,97 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.txtphone.placeholder = "Email".localized
+        self.txtemail.placeholder = "Phone".localized
+        self.txtcompany.placeholder = "Company".localized
+        self.txtlastname.placeholder = "Last Name".localized
+        self.txtfirstname.placeholder = "First Name".localized
+        self.lblsavename.text = "Save To".localized
+        self.lblsaveTo.text = "Device".localized
+        
+        self.txtfirstname.isUserInteractionEnabled = true
+        self.txtlastname.isUserInteractionEnabled = true
+        self.txtcompany.isUserInteractionEnabled = true
+        self.txtphone.isUserInteractionEnabled = true
+        self.txtemail.isUserInteractionEnabled = true
+        
+        if Defaults.bool(forKey: "KeyboardDisable") == true
+        {
+            self.txtfirstname.isUserInteractionEnabled = false
+            self.txtlastname.isUserInteractionEnabled = false
+            self.txtcompany.isUserInteractionEnabled = false
+            self.txtphone.isUserInteractionEnabled = false
+            self.txtemail.isUserInteractionEnabled = false
+        }
         constNativeAdsView.constant = 0
-        if AdsManager.shared.arrNativeAds.count > 0
-                {
-                    self.arrNativeAds = AdsManager.shared.arrNativeAds[0]
-                    self.loadNativeAds()
-                }
+        if !Defaults.bool(forKey: "adRemoved") {
+            if AdsManager.shared.arrNativeAds.count > 0
+            {
+                self.arrNativeAds = AdsManager.shared.arrNativeAds[0]
+                self.loadNativeAds()
+            }
+        }
     }
     
     func loadNativeAds()
     {
-            constNativeAdsView.constant = 0
-            
-            self.ad_title.text = arrNativeAds?.headline
-            self.ad_description.text = "\(arrNativeAds?.body ?? "")"
-            
-            self.callToActionView.setTitle(arrNativeAds?.callToAction, for: .normal)
-            self.nativeAdPlaceholder.isUserInteractionEnabled = false
-            
-            self.nativeAdPlaceholder.callToActionView = self.callToActionView
-            self.nativeAdPlaceholder.iconView = self.ad_icon
-            self.nativeAdPlaceholder.headlineView = self.ad_title
-            //        self.nativeAdPlaceholder.bodyView = self.ad_description
-            (self.nativeAdPlaceholder.bodyView as? UILabel)?.text = "\(arrNativeAds?.body ?? "")"
-            
-            self.ad_icon.image = arrNativeAds?.icon?.image
-            self.ad_icon.isHidden = arrNativeAds?.icon == nil
-            
-            self.nativeAdPlaceholder.nativeAd = arrNativeAds
-            constNativeAdsView.constant = 125
-        }
+        constNativeAdsView.constant = 0
+        
+        self.ad_title.text = arrNativeAds?.headline
+        self.ad_description.text = "\(arrNativeAds?.body ?? "")"
+        
+        self.callToActionView.setTitle(arrNativeAds?.callToAction, for: .normal)
+        self.nativeAdPlaceholder.isUserInteractionEnabled = false
+        
+        self.nativeAdPlaceholder.callToActionView = self.callToActionView
+        self.nativeAdPlaceholder.iconView = self.ad_icon
+        self.nativeAdPlaceholder.headlineView = self.ad_title
+        //        self.nativeAdPlaceholder.bodyView = self.ad_description
+        (self.nativeAdPlaceholder.bodyView as? UILabel)?.text = "\(arrNativeAds?.body ?? "")"
+        
+        self.ad_icon.image = arrNativeAds?.icon?.image
+        self.ad_icon.isHidden = arrNativeAds?.icon == nil
+        
+        self.nativeAdPlaceholder.nativeAd = arrNativeAds
+        constNativeAdsView.constant = 125
+    }
     
     @IBAction func onImageTapAction(_ sender:UIButton){
-//        let vc = TLPhotosPickerViewController()
-//        var configure = TLPhotosPickerConfigure()
-//        configure.allowedVideo = false
-//
-//        configure.allowedVideoRecording = false
-//        vc.configure = configure
-//        vc.delegate = self
-//        self.present(vc, animated: true, completion: nil)
-        let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
-            alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
-                self.openCamera()
-            }))
-            
-            alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
-                self.openGallary()
-            }))
-            
-            alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
-            
-            /*If you want work actionsheet on ipad
-            then you have to use popoverPresentationController to present the actionsheet,
-            otherwise app will crash on iPad */
-            switch UIDevice.current.userInterfaceIdiom {
-            case .pad:
-                alert.popoverPresentationController?.sourceView = sender
-                alert.popoverPresentationController?.sourceRect = sender.bounds
-                alert.popoverPresentationController?.permittedArrowDirections = .up
-            default:
-                break
-            }
-            
-            self.present(alert, animated: true, completion: nil)
+        //        let vc = TLPhotosPickerViewController()
+        //        var configure = TLPhotosPickerConfigure()
+        //        configure.allowedVideo = false
+        //
+        //        configure.allowedVideoRecording = false
+        //        vc.configure = configure
+        //        vc.delegate = self
+        //        self.present(vc, animated: true, completion: nil)
+        let alert = UIAlertController(title: "Choose Image".localized, message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Camera".localized, style: .default, handler: { _ in
+            self.openCamera()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Gallery".localized, style: .default, handler: { _ in
+            self.openGallary()
+        }))
+        
+        alert.addAction(UIAlertAction.init(title: "Cancel".localized, style: .cancel, handler: nil))
+        
+        /*If you want work actionsheet on ipad
+         then you have to use popoverPresentationController to present the actionsheet,
+         otherwise app will crash on iPad */
+        switch UIDevice.current.userInterfaceIdiom {
+        case .pad:
+            alert.popoverPresentationController?.sourceView = sender
+            alert.popoverPresentationController?.sourceRect = sender.bounds
+            alert.popoverPresentationController?.permittedArrowDirections = .up
+        default:
+            break
+        }
+        
+        self.present(alert, animated: true, completion: nil)
     }
-  
+    
     @IBAction func onBackAction(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -232,7 +261,7 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
                     
                     indicator.stopAnimating()
                     let scheme = MDCContainerScheme()
-                    let alertController = MDCAlertController(title: "Message", message: "Contact saved successfully!")
+                    let alertController = MDCAlertController(title: APPNAME, message: "Contact saved successfully!".localized)
                     let action = MDCAlertAction(title:"OK") { (action) in
                         self.dismiss(animated: true) {
                             
@@ -320,9 +349,9 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
                     indicator.removeFromSuperview()
                     
                     if self.isEditMode{
-                        self.btnsave.setTitle("Update", for: .normal)
+                        self.btnsave.setTitle("Update".localized, for: .normal)
                     }else{
-                        self.btnsave.setTitle("Save", for: .normal)
+                        self.btnsave.setTitle("Save".localized, for: .normal)
                     }
                 }
             }else{
@@ -336,9 +365,9 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
                         indicator.removeFromSuperview()
                         
                         if self.isEditMode{
-                            self.btnsave.setTitle("Update", for: .normal)
+                            self.btnsave.setTitle("Update".localized, for: .normal)
                         }else{
-                            self.btnsave.setTitle("Save", for: .normal)
+                            self.btnsave.setTitle("Save".localized, for: .normal)
                         }
                         
                         print("No contacts found")
@@ -349,9 +378,9 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
                         indicator.removeFromSuperview()
                         
                         if self.isEditMode{
-                            self.btnsave.setTitle("Update", for: .normal)
+                            self.btnsave.setTitle("Update".localized, for: .normal)
                         }else{
-                            self.btnsave.setTitle("Save", for: .normal)
+                            self.btnsave.setTitle("Save".localized, for: .normal)
                         }
                         
                         return
@@ -376,16 +405,16 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
                             contactNew.phoneNumbers.append(CNLabeledValue(label: "mobile", value: CNPhoneNumber(stringValue: txtphone.text ?? "")))
                             
                             // Image
-//                            if self.selectedImage != nil{
-//                                let image = self.imgprofile.image!
-//                                let size = image.getSizeIn(.megabyte)
-//                                if size > 12.0{
-//                                    let newimage = image.jpegData(.medium)
-//                                    contactNew.imageData = newimage
-//                                }else{
-//                                    contactNew.imageData = image.jpegData(.highest)
-//                                }
-//                            }
+                            //                            if self.selectedImage != nil{
+                            //                                let image = self.imgprofile.image!
+                            //                                let size = image.getSizeIn(.megabyte)
+                            //                                if size > 12.0{
+                            //                                    let newimage = image.jpegData(.medium)
+                            //                                    contactNew.imageData = newimage
+                            //                                }else{
+                            //                                    contactNew.imageData = image.jpegData(.highest)
+                            //                                }
+                            //                            }
                             let image = self.imgprofile.image!
                             let newimage = image.jpegData(.medium)
                             contactNew.imageData = newimage
@@ -401,7 +430,7 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
                             
                             indicator.stopAnimating()
                             let scheme = MDCContainerScheme()
-                            let alertController = MDCAlertController(title: "Message", message: "Contact Update successfully!")
+                            let alertController = MDCAlertController(title: "Message", message: "Contact Update successfully!".localized)
                             let action = MDCAlertAction(title:"OK") { (action) in
                                 self.dismiss(animated: true) {
                                     
@@ -486,9 +515,9 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
                             indicator.removeFromSuperview()
                             
                             if self.isEditMode{
-                                self.btnsave.setTitle("Update", for: .normal)
+                                self.btnsave.setTitle("Update".localized, for: .normal)
                             }else{
-                                self.btnsave.setTitle("Save", for: .normal)
+                                self.btnsave.setTitle("Save".localized, for: .normal)
                             }
                             
                             print("Error2 = \(e)")
@@ -499,9 +528,9 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
                         indicator.removeFromSuperview()
                         
                         if self.isEditMode{
-                            self.btnsave.setTitle("Update", for: .normal)
+                            self.btnsave.setTitle("Update".localized, for: .normal)
                         }else{
-                            self.btnsave.setTitle("Save", for: .normal)
+                            self.btnsave.setTitle("Save".localized, for: .normal)
                         }
                         
                         print("Error1 = \(e)")
@@ -512,9 +541,9 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
                     indicator.removeFromSuperview()
                     
                     if self.isEditMode{
-                        self.btnsave.setTitle("Update", for: .normal)
+                        self.btnsave.setTitle("Update".localized, for: .normal)
                     }else{
-                        self.btnsave.setTitle("Save", for: .normal)
+                        self.btnsave.setTitle("Save".localized, for: .normal)
                     }
                     
                     print("Error = \(err)")
@@ -551,30 +580,30 @@ class AddContactVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     //MARK: - extension
     
     //MARK: - Open the camera
-      func openCamera(){
-          if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerController.SourceType.camera)){
-              imagePicker.sourceType = UIImagePickerController.SourceType.camera
-              //If you dont want to edit the photo then you can set allowsEditing to false
-              imagePicker.allowsEditing = true
-              imagePicker.delegate = self
-              self.present(imagePicker, animated: true, completion: nil)
-          }
-          else{
-              let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
-              alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-              self.present(alert, animated: true, completion: nil)
-          }
-      }
-      
-      //MARK: - Choose image from camera roll
-      
-      func openGallary(){
-          imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
-          //If you dont want to edit the photo then you can set allowsEditing to false
-          imagePicker.allowsEditing = true
-          imagePicker.delegate = self
-          self.present(imagePicker, animated: true, completion: nil)
-      }
+    func openCamera(){
+        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerController.SourceType.camera)){
+            imagePicker.sourceType = UIImagePickerController.SourceType.camera
+            //If you dont want to edit the photo then you can set allowsEditing to false
+            imagePicker.allowsEditing = true
+            imagePicker.delegate = self
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+        else{
+            let alert  = UIAlertController(title: "Warning".localized, message: "You don't have camera".localized, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    //MARK: - Choose image from camera roll
+    
+    func openGallary(){
+        imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+        //If you dont want to edit the photo then you can set allowsEditing to false
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        self.present(imagePicker, animated: true, completion: nil)
+    }
     
     func ValidatePasswordWithConfirmPassword(pass:String,ConfirmPass:String) -> Bool
     {
@@ -672,71 +701,71 @@ extension AddContactVC: CNContactViewControllerDelegate{
     }
 }
 /*
-extension AddContactVC: GADNativeAdLoaderDelegate {
-    func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: Error) {
-        print("native ads failed to load")
-    }
-    
-    func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
-        
-        // Set ourselves as the native ad delegate to be notified of native ad events.
-        nativeAd.delegate = self
-        self.ad_title.text = nativeAd.headline
-        self.ad_description.text = "\t \(nativeAd.body ?? "")"
-        
-        self.callToActionView.setTitle(nativeAd.callToAction, for: .normal)
-        self.nativeAdPlaceholder.isUserInteractionEnabled = false
-        
-        self.nativeAdPlaceholder.callToActionView = self.callToActionView
-        self.nativeAdPlaceholder.iconView = self.ad_icon
-        self.nativeAdPlaceholder.headlineView = self.ad_title
-        //        self.nativeAdPlaceholder.bodyView = self.ad_description
-        (self.nativeAdPlaceholder.bodyView as? UILabel)?.text = "\t \(nativeAd.body ?? "")"
-      
-        self.ad_icon.image = nativeAd.icon?.image
-        self.ad_icon.isHidden = nativeAd.icon == nil
-        
-        self.nativeAdPlaceholder.nativeAd = nativeAd
-        constNativeAdsView.constant = 125
-       // self.nativeAdPlaceholder.isHidden = false
-        
-    }
-}
-extension AddContactVC: GADVideoControllerDelegate
-{
-    func videoControllerDidEndVideoPlayback(_ videoController: GADVideoController) {
-    }
-}
-
-
-// MARK: - GADNativeAdDelegate implementation
-extension AddContactVC: GADNativeAdDelegate {
-    
-    func nativeAdDidRecordClick(_ nativeAd: GADNativeAd) {
-        print("\(#function) called")
-    }
-    
-    func nativeAdDidRecordImpression(_ nativeAd: GADNativeAd) {
-        print("\(#function) called")
-    }
-    
-    func nativeAdWillPresentScreen(_ nativeAd: GADNativeAd) {
-        print("\(#function) called")
-    }
-    
-    func nativeAdWillDismissScreen(_ nativeAd: GADNativeAd) {
-        print("\(#function) called")
-    }
-    
-    func nativeAdDidDismissScreen(_ nativeAd: GADNativeAd) {
-        print("\(#function) called")
-    }
-    
-    func nativeAdWillLeaveApplication(_ nativeAd: GADNativeAd) {
-        print("\(#function) called")
-    }
-}
-*/
+ extension AddContactVC: GADNativeAdLoaderDelegate {
+ func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: Error) {
+ print("native ads failed to load")
+ }
+ 
+ func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
+ 
+ // Set ourselves as the native ad delegate to be notified of native ad events.
+ nativeAd.delegate = self
+ self.ad_title.text = nativeAd.headline
+ self.ad_description.text = "\t \(nativeAd.body ?? "")"
+ 
+ self.callToActionView.setTitle(nativeAd.callToAction, for: .normal)
+ self.nativeAdPlaceholder.isUserInteractionEnabled = false
+ 
+ self.nativeAdPlaceholder.callToActionView = self.callToActionView
+ self.nativeAdPlaceholder.iconView = self.ad_icon
+ self.nativeAdPlaceholder.headlineView = self.ad_title
+ //        self.nativeAdPlaceholder.bodyView = self.ad_description
+ (self.nativeAdPlaceholder.bodyView as? UILabel)?.text = "\t \(nativeAd.body ?? "")"
+ 
+ self.ad_icon.image = nativeAd.icon?.image
+ self.ad_icon.isHidden = nativeAd.icon == nil
+ 
+ self.nativeAdPlaceholder.nativeAd = nativeAd
+ constNativeAdsView.constant = 125
+ // self.nativeAdPlaceholder.isHidden = false
+ 
+ }
+ }
+ extension AddContactVC: GADVideoControllerDelegate
+ {
+ func videoControllerDidEndVideoPlayback(_ videoController: GADVideoController) {
+ }
+ }
+ 
+ 
+ // MARK: - GADNativeAdDelegate implementation
+ extension AddContactVC: GADNativeAdDelegate {
+ 
+ func nativeAdDidRecordClick(_ nativeAd: GADNativeAd) {
+ print("\(#function) called")
+ }
+ 
+ func nativeAdDidRecordImpression(_ nativeAd: GADNativeAd) {
+ print("\(#function) called")
+ }
+ 
+ func nativeAdWillPresentScreen(_ nativeAd: GADNativeAd) {
+ print("\(#function) called")
+ }
+ 
+ func nativeAdWillDismissScreen(_ nativeAd: GADNativeAd) {
+ print("\(#function) called")
+ }
+ 
+ func nativeAdDidDismissScreen(_ nativeAd: GADNativeAd) {
+ print("\(#function) called")
+ }
+ 
+ func nativeAdWillLeaveApplication(_ nativeAd: GADNativeAd) {
+ print("\(#function) called")
+ }
+ }
+ */
 
 extension UIImage {
     enum JPEGQuality: CGFloat {
@@ -774,17 +803,5 @@ extension UIImage {
         }
         
         return size //String(format: "%.2f", size)
-    }
-}
-
-extension String {
-    public var validPhoneNumber: Bool {
-        let types: NSTextCheckingResult.CheckingType = [.phoneNumber]
-        guard let detector = try? NSDataDetector(types: types.rawValue) else { return false }
-        if let match = detector.matches(in: self, options: [], range: NSMakeRange(0, self.count)).first?.phoneNumber {
-            return match == self
-        } else {
-            return false
-        }
     }
 }

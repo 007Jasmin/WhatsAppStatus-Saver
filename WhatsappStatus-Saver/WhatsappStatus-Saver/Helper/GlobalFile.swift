@@ -8,45 +8,6 @@
 import Foundation
 import UIKit
 
-func didEnterHomeScreens()
-{
-    let HomeVC: HomeVC = mainStoryBoard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
-    HomeVC.tabBarItem.selectedImage = UIImage(named: "ic_knowledge_selected")?.withRenderingMode(.alwaysOriginal)
-    HomeVC.tabBarItem.image = UIImage(named: "ic_knowledge_unselected")?.withRenderingMode(.alwaysOriginal)
-    HomeVC.tabBarItem.title = "Home"
-   // HomeVC.isFromSplash = true
-    
-    let HowToUseVC: HowToUseVC = mainStoryBoard.instantiateViewController(withIdentifier: "HowToUseVC") as! HowToUseVC
-    HowToUseVC.tabBarItem.selectedImage = UIImage(named: "ic_tracker_selected")?.withRenderingMode(.alwaysOriginal)
-    HowToUseVC.tabBarItem.image = UIImage(named: "ic_tracker_unselected")?.withRenderingMode(.alwaysOriginal)
-    HowToUseVC.tabBarItem.title = "How to Use"
-    
-    let MediaView: MediaView = mainStoryBoard.instantiateViewController(withIdentifier: "MediaView") as! MediaView
-    MediaView.tabBarItem.selectedImage = UIImage(named: "ic_settings_selected")?.withRenderingMode(.alwaysOriginal)
-    MediaView.tabBarItem.image = UIImage(named: "ic_settings_unselected")?.withRenderingMode(.alwaysOriginal)
-    MediaView.tabBarItem.title = "Media"
-   
-    UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor(hexString: "#0D0D0D").withAlphaComponent(0.3)], for: .normal)
-    UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor(hexString: "#FF3F80")], for: .selected)
-//        let bgView = UIImageView(image: UIImage(named: "tab"))
-//        bgView.frame = CGRect(x: 0, y: 0, width: screenWidth, height: 85)
-//        tabBarVc.tabBar.addSubview(bgView)
-//        tabBarVc.tabBar.sendSubviewToBack(bgView)
-    tabBarVc.tabBar.layer.borderWidth = 0.0
-    tabBarVc.tabBar.layer.borderColor = UIColor.clear.cgColor
-    tabBarVc.tabBar.clipsToBounds = true
-    tabBarVc.tabBar.backgroundColor = UIColor.white
-    tabBarVc.viewControllers = [HomeVC,HowToUseVC,MediaView]
-    tabBarVc.tabBar.barTintColor = UIColor.clear
-    tabBarVc.tabBar.tintColor = UIColor.clear
-    tabBarVc.tabBar.layer.borderWidth = 1
-    tabBarVc.tabBar.layer.borderColor = UIColor.black.withAlphaComponent(0.1).cgColor
-    tabBarVc.selectedViewController = HomeVC
-    let nav = UINavigationController(rootViewController: tabBarVc)
-    nav.navigationBar.isHidden = true
-    appDelegate.window?.rootViewController = nav
-}
-
 class ActualGradientButton: UIButton {
 
     override func layoutSubviews() {
@@ -64,6 +25,25 @@ class ActualGradientButton: UIButton {
         layer.insertSublayer(l, at: 0)
         return l
     }()
+}
+
+class themeImageView : UIImageView{
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+
+    private func setup()
+    {
+        self.image = self.image?.withRenderingMode(.alwaysTemplate)
+        self.tintColor = UIColor(named: "themeColor")
+    }
 }
 
 class WhiteImageView : UIImageView{

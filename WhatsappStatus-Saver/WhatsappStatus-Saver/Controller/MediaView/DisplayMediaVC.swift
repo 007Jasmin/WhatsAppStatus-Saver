@@ -12,12 +12,14 @@ import SVProgressHUD
 class DisplayMediaVC: UIViewController {
     
     @IBOutlet var lblHeader:UILabel!
+    @IBOutlet var lblNoData:UILabel!
     @IBOutlet var btnDelete:UIButton!
     @IBOutlet var btnDeleteIcon:UIButton!
     @IBOutlet var collAssest:UICollectionView!
     @IBOutlet var constBtnDeleteHeight:NSLayoutConstraint!
     @IBOutlet var closeView:UIView!
     @IBOutlet var deleteView:UIView!
+    @IBOutlet var noDataView:UIView!
     
     var multipleSelectedArray:[PHAsset] = []
     var arrOfPHAsset:[PHAsset] = []
@@ -26,6 +28,7 @@ class DisplayMediaVC: UIViewController {
     var isEnableMultipleDelete:Bool = false
     let options = PHImageRequestOptions()
     var headerVal:String = ""
+    var objdone:objectCancel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +36,15 @@ class DisplayMediaVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.lblNoData.text = "No files found".localized
+        self.deleteView.isHidden = true
+        self.noDataView.isHidden = false
+        if arrOfPHAsset.count > 0
+        {
+            self.deleteView.isHidden = false
+            self.noDataView.isHidden = true
+        }
         self.lblHeader.text = headerVal
         self.closeView.isHidden = true
         self.constBtnDeleteHeight.constant = 0
@@ -47,6 +59,7 @@ class DisplayMediaVC: UIViewController {
 extension DisplayMediaVC
 {
     @IBAction func btnBack(_ sender: Any) {
+        objdone?()
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -183,20 +196,37 @@ extension DisplayMediaVC: UICollectionViewDelegate,UICollectionViewDataSource,UI
         if let cell:ImageCell = self.collAssest.cellForItem(at: indexPath) as? ImageCell {
             if !isEnableMultipleDelete {
                 
-                if let  asset = cell.asset {
-                    let joinarr  = Array(self.arrOfPHAsset)
-                    let index = joinarr.index { $0.localIdentifier == asset.localIdentifier } ?? 0
-                    
-                    let vc = mainStoryBoard.instantiateViewController(withIdentifier: "ImageViewVC") as! ImageViewVC
-                    vc.currentIndex = index
-                    vc.fetchResult = joinarr
-                    vc.asset = asset
-                    vc.objCancel = {(arrPhAssest) in
-                        self.arrOfPHAsset = []
-                        self.arrOfPHAsset = arrPhAssest
-                        self.collAssest.reloadData()
+                if let asset = cell.asset {
+                    if asset.mediaType == .video
+                    {
+                        let joinarr  = arrOfPHAsset.filter({$0.mediaType == .video})
+                        let index = joinarr.firstIndex { $0.localIdentifier == asset.localIdentifier } ?? 0
+                        let vc = mainStoryBoard.instantiateViewController(withIdentifier: "VideoViewVC") as! VideoViewVC
+                        vc.videoAsset = joinarr
+                        vc.selectedIndex = index
+                        vc.objCancel = {(arrPhAssest) in
+                            self.arrOfPHAsset = []
+                            self.arrOfPHAsset = arrPhAssest
+                            self.collAssest.reloadData()
+                        }
+                        self.navigationController?.pushViewController(vc, animated: true)
                     }
-                    self.navigationController?.pushViewController(vc, animated: true)
+                    else
+                    {
+                        let joinarr  = Array(self.arrOfPHAsset)
+                        let index = joinarr.index { $0.localIdentifier == asset.localIdentifier } ?? 0
+                        
+                        let vc = mainStoryBoard.instantiateViewController(withIdentifier: "ImageViewVC") as! ImageViewVC
+                        vc.currentIndex = index
+                        vc.fetchResult = joinarr
+                        vc.asset = asset
+                        vc.objCancel = {(arrPhAssest) in
+                            self.arrOfPHAsset = []
+                            self.arrOfPHAsset = arrPhAssest
+                            self.collAssest.reloadData()
+                        }
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
                 }
             }
             else

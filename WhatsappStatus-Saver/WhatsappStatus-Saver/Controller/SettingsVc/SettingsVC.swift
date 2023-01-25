@@ -27,10 +27,10 @@ class SettingsVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.SetSettingArray()
-        self.lblHeader.text = "Settings"
-        self.lblPremiumTitle.text = "Upgrade to Premium"
-        self.lblPremiumSubStr.text = "Get premium to unlock feature"
-        self.btnBuyNow.setTitle("BUY NOW", for: .normal)
+        self.lblHeader.text = "Settings".localized
+        self.lblPremiumTitle.text = "Upgrade to Premium".localized
+        self.lblPremiumSubStr.text = "Get premium to unlock feature".localized
+        self.btnBuyNow.setTitle(" \("BUY NOW".localized) ", for: .normal)
     }
 
 }
@@ -40,12 +40,12 @@ extension SettingsVC
     func SetSettingArray()
     {
         arrFeatures = [
-            ["name":"Share app","image":UIImage(named:"ic_share")!],
-            ["name":"Feedback","image":UIImage(named:"ic_feedback")!],
-            ["name":"Privacy Policy","image":UIImage(named:"ic_policy")!],
-            ["name":"Rate Us","image":UIImage(named:"ic_rateus")!],
-            ["name":"Terms of Use","image":UIImage(named:"ic_terms")!],
-            ["name":"How to get photo status?","image":UIImage(named:"ic_data")!]
+            ["name":"Share app".localized,"image":UIImage(named:"ic_share")!],
+            ["name":"Feedback".localized,"image":UIImage(named:"ic_feedback")!],
+            ["name":"Privacy Policy".localized,"image":UIImage(named:"ic_policy")!],
+            ["name":"Rate Us".localized,"image":UIImage(named:"ic_rateus")!],
+            ["name":"Terms of Use".localized,"image":UIImage(named:"ic_terms")!],
+            ["name":"How to get photo status?".localized,"image":UIImage(named:"ic_data")!]
         ] as? [[String : Any]] ?? [[String : Any]]()
         self.tblSettings.reloadData()
     }
@@ -108,7 +108,7 @@ extension SettingsVC:UITableViewDelegate,UITableViewDataSource,MFMailComposeView
             mailView = MFMailComposeViewController()
             mailView.mailComposeDelegate = self
             mailView.setToRecipients(["erasoft.gaurav@gmail.com"])
-            mailView.setSubject("Blood Pressure App")
+            mailView.setSubject("Blood Pressure App".localized)
             mailView.setMessageBody(strVal, isHTML: false)
             self.present(mailView, animated: true, completion: nil)
         }
@@ -120,13 +120,9 @@ extension SettingsVC:UITableViewDelegate,UITableViewDataSource,MFMailComposeView
         }
         else if indexPath.row == 3
         {
-            if let reviewURL = URL(string: "itms-apps://itunes.apple.com/us/app/apple-store/\(APPID)?mt=8"), UIApplication.shared.canOpenURL(reviewURL) {
-                 if #available(iOS 10.0, *) {
-                   UIApplication.shared.open(reviewURL, options: [:], completionHandler: nil)
-                 } else {
-                   UIApplication.shared.openURL(reviewURL)
-                 }
-            }
+            let vc = mainStoryBoard.instantiateViewController(withIdentifier: "RatingVc") as! RatingVc
+            vc.modalPresentationStyle = .overCurrentContext
+            self.present(vc, animated: false, completion: nil)
         }
         else if indexPath.row == 4
         {
