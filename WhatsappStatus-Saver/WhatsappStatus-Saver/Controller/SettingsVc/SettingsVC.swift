@@ -122,11 +122,16 @@ extension SettingsVC:UITableViewDelegate,UITableViewDataSource,MFMailComposeView
         {
             let vc = mainStoryBoard.instantiateViewController(withIdentifier: "RatingVc") as! RatingVc
             vc.modalPresentationStyle = .overCurrentContext
+            vc.objCancel = {
+                self.dismiss(animated: false, completion: nil)
+            }
             self.present(vc, animated: false, completion: nil)
         }
         else if indexPath.row == 4
         {
-            
+            let PrivacyPolicyVC: PrivacyPolicyVC = mainStoryBoard.instantiateViewController(withIdentifier: "PrivacyPolicyVC") as! PrivacyPolicyVC
+            PrivacyPolicyVC.isForPrivacy = false
+            self.navigationController?.pushViewController(PrivacyPolicyVC, animated: true)
         }
         else if indexPath.row == 5
         {

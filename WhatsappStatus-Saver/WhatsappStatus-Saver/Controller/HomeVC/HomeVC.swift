@@ -15,17 +15,16 @@ class HomeVC: UIViewController {
     @IBOutlet var lblCleaner:UILabel!
     @IBOutlet var lblMesg:UILabel!
     @IBOutlet var lblRemoveAds:UILabel!
-    @IBOutlet weak var MainImageView: UIImageView!
     @IBOutlet weak var nativeAdPlaceholder: GADNativeAdView!
     @IBOutlet weak var media_view: GADMediaView!
     @IBOutlet weak var callToActionView: UIButton!
     @IBOutlet weak var ad_icon: UIImageView!
     @IBOutlet weak var ad_title: UILabel!
     @IBOutlet weak var ad_description: UILabel!
+    @IBOutlet var constNativeAdsView:NSLayoutConstraint!
     
     var arrNativeAds:GADNativeAd?
     var isFromSplash:Bool = false
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,32 +42,37 @@ class HomeVC: UIViewController {
         self.lblCleaner.text = "Whats Cleaner".localized
         self.lblMesg.text = "Direct Chat".localized
         self.lblRemoveAds.text = "Remove Ads".localized
+        
         self.nativeAdPlaceholder.isHidden = true
+        self.constNativeAdsView.isActive = true
         if !Defaults.bool(forKey: "adRemoved") {
-            if isFromSplash == true
-            {
-                if interstitialAd != nil {
-                    AdsManager.shared.presentInterstitialAd1(vc: self)
-                }
-                isFromSplash = false
-            }
+            
             if AdsManager.shared.arrNativeAds.count > 0
             {
                 self.arrNativeAds = AdsManager.shared.arrNativeAds[0]
                 self.loadNativeAds()
+                self.constNativeAdsView.isActive = false
             }
         }
     }
     
 }
-//Calling IBAction & Function
+//MARK: - Calling IBAction & Function
 extension HomeVC
 {
     @IBAction func btnExitApp(_ sender: UIButton)
     {
-        let ExitAppVC = mainStoryBoard.instantiateViewController(withIdentifier: "ExitAppVC") as! ExitAppVC
-        ExitAppVC.modalPresentationStyle = .overFullScreen
-        self.present(ExitAppVC, animated: true)
+        if Defaults.bool(forKey: "RatingDone") == false{
+            let vc = mainStoryBoard.instantiateViewController(withIdentifier: "RatingVc") as! RatingVc
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.objCancel = {
+                self.dismiss(animated: false, completion: nil)
+                self.ExtiApp()
+            }
+            self.present(vc, animated: false, completion: nil)
+        }else{
+            self.ExtiApp()
+        }
     }
     
     @IBAction func btnOpenWebView(_ sender: UIButton) {
@@ -129,9 +133,22 @@ extension HomeVC
     }
     
     @IBAction func btnLanguage(_ sender: UIButton) {
-        let vc = mainStoryBoard.instantiateViewController(withIdentifier: "LanguageSelectionVC") as! LanguageSelectionVC
-        vc.selectedIndex = Defaults.integer(forKey: "LangIndex")
-        self.navigationController?.pushViewController(vc, animated: true)
+        if !Defaults.bool(forKey: "adRemoved") {
+            if interstitialAd != nil {
+                AdsManager.shared.presentInterstitialAd1(vc: self)
+            }
+            DispatchQueue.main.asyncAfter(deadline: when)
+            {
+                let vc = mainStoryBoard.instantiateViewController(withIdentifier: "LanguageSelectionVC") as! LanguageSelectionVC
+                vc.selectedIndex = Defaults.integer(forKey: "LangIndex")
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        }
+        else{
+            let vc = mainStoryBoard.instantiateViewController(withIdentifier: "LanguageSelectionVC") as! LanguageSelectionVC
+            vc.selectedIndex = Defaults.integer(forKey: "LangIndex")
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func btnHowToUse(_ sender: UIButton) {
@@ -161,9 +178,16 @@ extension HomeVC
         
         self.media_view.mediaContent = arrNativeAds?.mediaContent
         self.ad_icon.image = arrNativeAds?.icon?.image
-        self.ad_icon.isHidden = arrNativeAds?.icon == nil
-        
+        if arrNativeAds?.icon?.image == nil{
+            self.ad_icon.image = UIImage(named: "ic_ads")
+        }
         self.nativeAdPlaceholder.nativeAd = arrNativeAds
         self.nativeAdPlaceholder.isHidden = false
+    }
+    
+    func ExtiApp(){
+        let ExitAppVC = mainStoryBoard.instantiateViewController(withIdentifier: "ExitAppVC") as! ExitAppVC
+        ExitAppVC.modalPresentationStyle = .overFullScreen
+        self.present(ExitAppVC, animated: true)
     }
 }

@@ -12,11 +12,23 @@ class PrivacyPolicyVC: UIViewController {
     
     @IBOutlet var webivew:WKWebView!
     @IBOutlet weak var lblHeader: UILabel!
+    
+    var isForPrivacy:Bool = true
+    var URLStr:String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        lblHeader.text = "Privacy Policy".localized
-        if let urlVal = URL(string: PRIVACYPOLICY)
+        if isForPrivacy == true
+        {
+            lblHeader.text = "Privacy Policy".localized
+            URLStr = PRIVACYPOLICY
+        }
+        else
+        {
+            lblHeader.text = "Terms of Use".localized
+            URLStr = termsLink
+        }
+        if let urlVal = URL(string: URLStr)
         {
             let rqeURL = URLRequest(url: urlVal)
             if rqeURL != nil

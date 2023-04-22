@@ -7,175 +7,79 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7F247115-77BB-4655-BE6E-8791E9617F0E"
-            shouldBeEnabled = "Yes"
+            uuid = "DA4F2D21-4C8B-4AE6-A779-FB26DE032BEA"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WhatsappStatus-Saver/Controller/MediaView/MediaView.swift"
+            filePath = "WhatsappStatus-Saver/Controller/GetStated/AdsLoader.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
-            landmarkName = "SetUpUI()"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "loadInterstitialAd()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "11B2BEB9-1381-43CC-A2E1-07BD94318A97"
-            shouldBeEnabled = "Yes"
+            uuid = "4FCA753D-9217-4985-8113-AF403DAEB9C9"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WhatsappStatus-Saver/Controller/MediaView/MediaView.swift"
+            filePath = "WhatsappStatus-Saver/Controller/GetStated/AdsLoader.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
-            landmarkName = "SetUpUI()"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "loadInterstitialAd()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9D8BB043-5A23-4F3C-AF91-013B31D957E1"
+            uuid = "541D2BD6-1935-49E9-8E41-0CC639D18101"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WhatsappStatus-Saver/Controller/MediaView/MediaView.swift"
+            filePath = "WhatsappStatus-Saver/Controller/HomeVC/HomeVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
-            landmarkName = "SetUpUI()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6FF68E03-C3BE-4865-AF0E-B502DAA7BF4F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WhatsappStatus-Saver/Controller/MediaView/MediaView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
-            landmarkName = "SetUpUI()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "26BCC8C9-4FC6-4D73-9F97-8A02E98A1ABB"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WhatsappStatus-Saver/Controller/MediaView/MediaView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
-            landmarkName = "SetUpUI()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A2C5E4A2-FF31-4627-B3F0-B0E201FFFEF0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WhatsappStatus-Saver/Controller/MediaView/MediaView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
-            landmarkName = "fetchCustomAlbumPhotos()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3DFC9302-1662-4607-83B7-3B712AFEE2E4"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WhatsappStatus-Saver/Controller/MediaView/MediaView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "SetUpUI()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8B6B7DDC-FA21-441F-8D7D-41E939F4F038"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WhatsappStatus-Saver/Controller/MediaView/MediaView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
-            landmarkName = "fetchCustomAlbumPhotos()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AEBF604B-08EE-4CDA-815C-993D5ADA5E40"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WhatsappStatus-Saver/Controller/SettingsVc/In-AppPremiumVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "getLocalPrice()"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "btnExitApp(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "AEBF604B-08EE-4CDA-815C-993D5ADA5E40 - 14b7fb6147d75693"
+                  uuid = "541D2BD6-1935-49E9-8E41-0CC639D18101 - fd28c0fbf053c33f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "WhatsappStatus_Saver.In_AppPremiumVC.getLocalPrice() -&gt; ()"
+                  symbolName = "WhatsappStatus_Saver.HomeVC.btnExitApp(__C.UIButton) -&gt; ()"
                   moduleName = "WhatsappStatus-Saver"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jasmin/GithubProjects/WhatsAppStatus-Saver/WhatsappStatus-Saver/WhatsappStatus-Saver/Controller/SettingsVc/In-AppPremiumVC.swift"
+                  urlString = "file:///Users/jasmin/GithubProjects/WhatsAppStatus-Saver/WhatsappStatus-Saver/WhatsappStatus-Saver/Controller/HomeVC/HomeVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "48">
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "531">
                </Location>
                <Location
-                  uuid = "AEBF604B-08EE-4CDA-815C-993D5ADA5E40 - 9a08199542382952"
+                  uuid = "541D2BD6-1935-49E9-8E41-0CC639D18101 - f4c42017992a96e2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Set&lt;__C.SKProduct&gt;) -&gt; () in WhatsappStatus_Saver.In_AppPremiumVC.getLocalPrice() -&gt; ()"
+                  symbolName = "closure #1 () -&gt; () in WhatsappStatus_Saver.HomeVC.btnExitApp(__C.UIButton) -&gt; ()"
                   moduleName = "WhatsappStatus-Saver"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jasmin/GithubProjects/WhatsAppStatus-Saver/WhatsappStatus-Saver/WhatsappStatus-Saver/Controller/SettingsVc/In-AppPremiumVC.swift"
+                  urlString = "file:///Users/jasmin/GithubProjects/WhatsAppStatus-Saver/WhatsappStatus-Saver/WhatsappStatus-Saver/Controller/HomeVC/HomeVC.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "98"
-                  endingLineNumber = "98"
-                  offsetFromSymbolStart = "220">
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "22">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -183,16 +87,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "01EDD61C-D0A2-40D4-ADD2-E05495A47F03"
+            uuid = "44DD7203-F258-4154-AB34-D0D1D0ED61B7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WhatsappStatus-Saver/Controller/SettingsVc/In-AppPremiumVC.swift"
+            filePath = "WhatsappStatus-Saver/Controller/HomeVC/HomeVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "getLocalPrice()"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "btnExitApp(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F1A46099-05B5-4495-BEDF-7BB7B3F861C3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WhatsappStatus-Saver/Controller/GetStated/SplshVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

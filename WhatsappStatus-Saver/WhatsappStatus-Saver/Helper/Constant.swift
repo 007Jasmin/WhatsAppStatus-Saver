@@ -18,17 +18,16 @@ var Flag = false
 let when = DispatchTime.now() + 2.2 
 
 //App Details
-let APPNAME                             = "WhatsApp Status Saver"
-let APPID                               = ""
+let APPNAME                             = "Status Saver - Photo Saver"
+let APPID                               = "1667716909"
 let RateLink                            = "https://itunes.apple.com/app/id\(APPID)?mt=8&action=write-review"
 let AppURL                              = "https://itunes.apple.com/app/id\(APPID)?mt=8"
-let PRIVACYPOLICY                       = "https://www.privacypolicycenter.com/view_custom.php?v=ZlRzQ2lsUXdyZnU1OVZDQSthdVJSZz09&n=WhatsApp-Status-Saver-App"
-let termsLink                           = "https://www.privacypolicycenter.com/view_custom.php?v=ZlRzQ2lsUXdyZnU1OVZDQSthdVJSZz09&n=WhatsApp-Status-Saver-App"
-let EMAIL                               = "erasoft.prachi@gmail.com"
+let PRIVACYPOLICY                       = "https://www.privacypolicycenter.com/view_custom.php?v=YThSR3VOL2hyL2VTL2lnQ1FQUldwdz09&n=Status-Saver---Photo-Saver"
+let termsLink                           = "https://www.privacypolicycenter.com/view_custom.php?v=SnRHaWp2OVYwY0ZXSC9TSzNxaDRXUT09&n=Status-Saver---Photo-Saver"
 
 //In-App Purchase
 let sharedsecret = "6d75e682089b416c845cf7c41a5f3efe"
-var IN_APP_PURCHASE_IDS = ["com.erasoft.StatusSaverApp.weekly","com.erasoft.StatusSaverApp.yearly","com.erasoft.StatusSaverApp.monthly"]
+var IN_APP_PURCHASE_IDS = ["com.erasoft.StatusSaverApp.weekly","com.erasoft.StatusSaverApp.monthly","com.erasoft.StatusSaverApp.yearly"]
 let expiredate = "Expiredate"
 
 //StoryBoatd

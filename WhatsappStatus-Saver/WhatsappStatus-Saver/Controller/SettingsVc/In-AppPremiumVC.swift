@@ -29,7 +29,7 @@ class In_AppPremiumVC: UIViewController {
     @IBOutlet var btnMonth: UIButton!
     @IBOutlet var btnYear: UIButton!
     
-    var selectedIndex : Int = 0
+    var selectedIndex : Int = -1
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,7 +90,16 @@ extension In_AppPremiumVC
     }
     
     @IBAction func btnPurchase(_ sender: UIButton) {
+        if selectedIndex == -1
+        {
+            AlertWithMessage(self, message: "Please select atleast One Subscription..".localized)
+            return
+        }
         InAppManager.shared.purchaseProduct(productId: IN_APP_PURCHASE_IDS[self.selectedIndex])
+    }
+    
+    @IBAction func btnRestorePurchase(_ sender: UIButton) {
+        InAppManager.shared.restoreProduct()
     }
     
     func getLocalPrice() {
@@ -100,11 +109,11 @@ extension In_AppPremiumVC
                 print("Product: \(product.localizedDescription), price: \(priceString)")
                 debugPrint("Product: \(product.localizedDescription), price: \(priceString)")
                 if product.productIdentifier == IN_APP_PURCHASE_IDS[0] {
-                    self.lblWeek.text = priceString
+                    self.lblWeek.text = "\(priceString)/week after FREE 3-day trial"
                 } else if product.productIdentifier == IN_APP_PURCHASE_IDS[1] {
-                    self.lblMonth.text = priceString
+                    self.lblMonth.text = "\(priceString)/month after FREE 3-day trial"
                 }else if product.productIdentifier == IN_APP_PURCHASE_IDS[2] {
-                    self.lblYear.text = priceString
+                    self.lblYear.text = "\(priceString)/year after FREE 3-day trial"
                 }
             }
         }

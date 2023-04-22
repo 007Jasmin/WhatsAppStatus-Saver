@@ -34,7 +34,7 @@ class LanguageSelectionVC: UIViewController {
     @IBOutlet var constNativeAdsView:NSLayoutConstraint!
     
     var arrLanguage = [[String : Any]]()
-    var selectedIndex:Int = -1
+    var selectedIndex:Int = 0
     var isFromSplash:Bool = false
     var objDone:objectCancel?
     var adLoader: GADAdLoader!
@@ -60,9 +60,6 @@ class LanguageSelectionVC: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.darkContent
         if !Defaults.bool(forKey: "adRemoved") {
-            if interstitialAd != nil {
-                AdsManager.shared.presentInterstitialAd1(vc: self)
-            }
             if AdsManager.shared.arrNativeAds.count > 0{
                 self.arrNativeAds = AdsManager.shared.arrNativeAds[0]
                 self.loadNativeAds()
@@ -136,7 +133,12 @@ extension LanguageSelectionVC
     
     @IBAction func btndone(_ sender:UIButton)
     {
-        langVal = UserDefaults.standard.string(forKey: "LangCode") ?? ""
+        if Defaults.string(forKey: "LangCode") ?? "" == ""
+        {
+            Defaults.set("en", forKey: "LangCode")
+            Defaults.set(0, forKey: "LangIndex")
+        }
+        langVal = Defaults.string(forKey: "LangCode") ?? ""
         
         if isFromSplash == true
         {

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B4CA21642993A768F1A86D7 /* Pods_WhatsappStatus_SaverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58A0F88F00A7DD07254F6F55 /* Pods_WhatsappStatus_SaverTests.framework */; };
 		BDE14A127782F3515BF4D8FD /* Pods_WhatsappStatus_Saver_WhatsappStatus_SaverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6BE2A49D2AB5111D52BC6D /* Pods_WhatsappStatus_Saver_WhatsappStatus_SaverUITests.framework */; };
+		DD01C7E729D2AE3B003C0F26 /* AdsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01C7E629D2AE3B003C0F26 /* AdsLoader.swift */; };
 		DD0259CB2978154E0050700A /* ExitAppVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0259CA2978154E0050700A /* ExitAppVC.swift */; };
 		DD173055297916A3004632DF /* FloatRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD173054297916A3004632DF /* FloatRatingView.swift */; };
 		DD17305729791A5E004632DF /* RatingVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD17305629791A5E004632DF /* RatingVc.swift */; };
@@ -21,6 +22,7 @@
 		DD3B9AE6296ECF5E000FCBD3 /* DoubleHandleCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B9AE2296ECF5D000FCBD3 /* DoubleHandleCircularSlider.swift */; };
 		DD3B9AE7296ECF5E000FCBD3 /* CircularTrig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B9AE3296ECF5E000FCBD3 /* CircularTrig.swift */; };
 		DD3B9AE8296ECF5E000FCBD3 /* GradientCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3B9AE4296ECF5E000FCBD3 /* GradientCircularSlider.swift */; };
+		DD3E9A3F299B62910096B1AE /* In-AppPurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3E9A3E299B62910096B1AE /* In-AppPurchaseVC.swift */; };
 		DD460BF6296BF07500695621 /* DiskStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD460BF5296BF07500695621 /* DiskStatus.swift */; };
 		DD460BFA296C168400695621 /* CenteredCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD460BF9296C168300695621 /* CenteredCollectionViewFlowLayout.swift */; };
 		DD460BFE296C21F700695621 /* PhotoZoomingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD460BFC296C21F700695621 /* PhotoZoomingView.swift */; };
@@ -100,6 +102,7 @@
 		686391D5D9D9A7EEB4731C73 /* Pods-WhatsappStatus-SaverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappStatus-SaverTests.release.xcconfig"; path = "Target Support Files/Pods-WhatsappStatus-SaverTests/Pods-WhatsappStatus-SaverTests.release.xcconfig"; sourceTree = "<group>"; };
 		8622CBFEEE9F6D7FC8321898 /* Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.debug.xcconfig"; path = "Target Support Files/Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests/Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4124F24011785575665B931 /* Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.release.xcconfig"; path = "Target Support Files/Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests/Pods-WhatsappStatus-Saver-WhatsappStatus-SaverUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DD01C7E629D2AE3B003C0F26 /* AdsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsLoader.swift; sourceTree = "<group>"; };
 		DD0259CA2978154E0050700A /* ExitAppVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExitAppVC.swift; sourceTree = "<group>"; };
 		DD173054297916A3004632DF /* FloatRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatRatingView.swift; sourceTree = "<group>"; };
 		DD17305629791A5E004632DF /* RatingVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingVc.swift; sourceTree = "<group>"; };
@@ -112,6 +115,7 @@
 		DD3B9AE2296ECF5D000FCBD3 /* DoubleHandleCircularSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleHandleCircularSlider.swift; sourceTree = "<group>"; };
 		DD3B9AE3296ECF5E000FCBD3 /* CircularTrig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularTrig.swift; sourceTree = "<group>"; };
 		DD3B9AE4296ECF5E000FCBD3 /* GradientCircularSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientCircularSlider.swift; sourceTree = "<group>"; };
+		DD3E9A3E299B62910096B1AE /* In-AppPurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "In-AppPurchaseVC.swift"; sourceTree = "<group>"; };
 		DD460BF5296BF07500695621 /* DiskStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskStatus.swift; sourceTree = "<group>"; };
 		DD460BF9296C168300695621 /* CenteredCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteredCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		DD460BFC296C21F700695621 /* PhotoZoomingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoZoomingView.swift; sourceTree = "<group>"; };
@@ -478,6 +482,7 @@
 		DDDF1A00295DC081005F89B5 /* GetStated */ = {
 			isa = PBXGroup;
 			children = (
+				DD01C7E629D2AE3B003C0F26 /* AdsLoader.swift */,
 				DDFF3CE72959829B0046EFA6 /* SplshVC.swift */,
 				DDDF1A05295DC884005F89B5 /* LanguageSelectionVC.swift */,
 				DDDF1A01295DC0A4005F89B5 /* GetStartedVC.swift */,
@@ -493,6 +498,7 @@
 				DDDF1A08295DCC92005F89B5 /* PrivacyPolicyVC.swift */,
 				DD1C04B9295EBDE300056E69 /* SettingsVC.swift */,
 				DD17305629791A5E004632DF /* RatingVc.swift */,
+				DD3E9A3E299B62910096B1AE /* In-AppPurchaseVC.swift */,
 			);
 			path = SettingsVc;
 			sourceTree = "<group>";
@@ -826,6 +832,7 @@
 				DDDF1A06295DC885005F89B5 /* LanguageSelectionVC.swift in Sources */,
 				DD173055297916A3004632DF /* FloatRatingView.swift in Sources */,
 				DDC8D90D29685299004A906C /* PhotoHelper.swift in Sources */,
+				DD3E9A3F299B62910096B1AE /* In-AppPurchaseVC.swift in Sources */,
 				DD47F2C829644FBF00DAFB75 /* FTConfiguration.swift in Sources */,
 				DD3B9ADD296ECAE6000FCBD3 /* RRCircularView.swift in Sources */,
 				DDDF1A09295DCC92005F89B5 /* PrivacyPolicyVC.swift in Sources */,
@@ -837,6 +844,7 @@
 				DD3B9AE7296ECF5E000FCBD3 /* CircularTrig.swift in Sources */,
 				DDFF3CE5295981B90046EFA6 /* Constant.swift in Sources */,
 				DD47F2C929644FBF00DAFB75 /* FTConstants.swift in Sources */,
+				DD01C7E729D2AE3B003C0F26 /* AdsLoader.swift in Sources */,
 				DDE54B5F295C45D200AFCD1F /* AddContactVC.swift in Sources */,
 				DD17305729791A5E004632DF /* RatingVc.swift in Sources */,
 				DDFF3CDB295974C70046EFA6 /* HowToUseVC.swift in Sources */,
@@ -1043,8 +1051,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 1.2;
+				DEVELOPMENT_TEAM = F3R3ZAMKDM;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = F3R3ZAMKDM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WhatsappStatus-Saver/AppConfig/Info.plist";
@@ -1053,17 +1061,18 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.erasoft.StatusSaverApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = WhatsAppApp_Development_Jan_2023;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = WhatsAppApp_Development_Jan_2023;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1079,8 +1088,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 1.2;
+				DEVELOPMENT_TEAM = F3R3ZAMKDM;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = F3R3ZAMKDM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WhatsappStatus-Saver/AppConfig/Info.plist";
@@ -1089,17 +1098,18 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.erasoft.StatusSaverApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = WhatsAppApp_Distribution_Jan_2023;
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = WhatsAppApp_Distribution_Jan_2023;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

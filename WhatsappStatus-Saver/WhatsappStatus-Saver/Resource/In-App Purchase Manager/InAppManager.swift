@@ -54,6 +54,7 @@ class InAppManager: NSObject {
                         
                     case .purchased(let expiryDate, let items):
                         debugPrint("\(productId) is valid until \(expiryDate)\n\(items)\n")
+                        print("\(productId) is valid until \(expiryDate)\n\(items)\n")
                         isPurched = true
                         Defaults.set(true, forKey: "adRemoved")
                         Defaults.synchronize()
@@ -97,9 +98,27 @@ class InAppManager: NSObject {
             switch result {
             case .success(let purchase):
                 debugPrint("Purchase Success: \(purchase.productId)")
+                print("Purchase Success: \(purchase.productId)")
+                if purchase.productId == "com.erasoft.StatusSaverApp.weekly"
+                {
+                    Defaults.set("Standard", forKey: "prductID")
+                }
+                else if purchase.productId == "com.erasoft.StatusSaverApp.monthly"
+                {
+                    Defaults.set("Popular", forKey: "prductID")
+                }
+                else if purchase.productId == "com.erasoft.StatusSaverApp.yearly"
+                {
+                    Defaults.set("Special Offer", forKey: "prductID")
+                }
                 SVProgressHUD.showSuccess(withStatus: "Purchase Successfully !")
                 Defaults.set(true, forKey: "adRemoved")
                 Defaults.synchronize()
+                let homeVC = mainStoryBoard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+                let nav = UINavigationController(rootViewController: homeVC)
+                nav.navigationBar.isHidden = true
+                appDelegate.window?.rootViewController = nav
+                
                 
             case .error(let error):
                 SVProgressHUD.showError(withStatus: error.localizedDescription)
@@ -128,11 +147,33 @@ class InAppManager: NSObject {
                 debugPrint("Restore Failed: \(results.restoreFailedPurchases)")
             } else if results.restoredPurchases.count > 0 {
                 debugPrint("Restore Success: \(results.restoredPurchases)")
+                for purchase in results.restoredPurchases {
+                    let prodID = purchase.productId as String
+                    
+                    switch prodID {
+                    case "com.erasoft.StatusSaverApp.weekly":
+                        Defaults.set("Standard", forKey: "prductID")
+                    case "com.erasoft.StatusSaverApp.monthly":
+                        Defaults.set("Popular", forKey: "prductID")
+                    case "com.erasoft.StatusSaverApp.yearly":
+                        Defaults.set("Special Offer", forKey: "prductID")
+                    default:
+                        Defaults.set(nil, forKey: "prductID")
+                    }
+                }
                 SVProgressHUD.showSuccess(withStatus: "Restore Successfully...")
+                Defaults.set(true, forKey: "adRemoved")
+                Defaults.synchronize()
+                let homeVC = mainStoryBoard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+                let nav = UINavigationController(rootViewController: homeVC)
+                nav.navigationBar.isHidden = true
+                appDelegate.window?.rootViewController = nav
             } else {
                 //                displayToast("Nothing to Restore")
                 SVProgressHUD.showError(withStatus: "Nothing to Restore")
             }
         }
     }
+    
+    
 }

@@ -16,6 +16,8 @@ class RatingVc: UIViewController {
     @IBOutlet var lblTitle: UILabel!
     @IBOutlet var lblDescription: UILabel!
     @IBOutlet var RatingImg: UIImageView!
+    
+    var objCancel:objectCancel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,12 +51,14 @@ extension RatingVc
         if let url = URL.init(string: RateLink){
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
-        
-        self.dismiss(animated: false, completion: nil)
+        Defaults.set(true, forKey: "RatingDone")
+        objCancel?()
+        //self.dismiss(animated: false, completion: nil)
     }
     
     @IBAction func btnCancel(_ sender: UIButton) {
-        self.dismiss(animated: false, completion: nil)
+        objCancel?()
+       // self.dismiss(animated: false, completion: nil)
     }
 }
 //Floting RateDelegate

@@ -14,7 +14,6 @@ class ExitAppVC: UIViewController
     @IBOutlet weak var advertiseView: UIView!
     @IBOutlet weak var addView: UIView!
     @IBOutlet weak var lctAddViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var MainImageView: UIImageView!
     @IBOutlet weak var nativeAdPlaceholder: GADNativeAdView!
     @IBOutlet weak var media_view: GADMediaView!
     @IBOutlet weak var callToActionView: UIButton!
@@ -92,8 +91,9 @@ class ExitAppVC: UIViewController
         
         self.media_view.mediaContent = arrNativeAds?.mediaContent
         self.ad_icon.image = arrNativeAds?.icon?.image
-        self.ad_icon.isHidden = arrNativeAds?.icon == nil
-        
+        if arrNativeAds?.icon?.image == nil{
+            self.ad_icon.image = UIImage(named: "ic_ads")
+        }
         self.nativeAdPlaceholder.nativeAd = arrNativeAds
         self.nativeAdPlaceholder.isHidden = false
     }

@@ -17,10 +17,10 @@ class DirectMessageVC: UIViewController {
     @IBOutlet weak var btnSend: UIButton!
     @IBOutlet var imgCountry: UIImageView!
     @IBOutlet var lblCountryCode: UILabel!
-    @IBOutlet weak var MainImageView: UIImageView!
+    
     @IBOutlet weak var nativeAdPlaceholder: GADNativeAdView!
     @IBOutlet weak var media_view: GADMediaView!
-    @IBOutlet weak var callToActionView: UIButton!
+    @IBOutlet weak var btncallToActionView: UIButton!
     @IBOutlet weak var ad_icon: UIImageView!
     @IBOutlet weak var ad_title: UILabel!
     @IBOutlet weak var ad_description: UILabel!
@@ -30,14 +30,15 @@ class DirectMessageVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.constNativeAdsView.constant = 0
+        self.nativeAdPlaceholder.isHidden = true
+        self.constNativeAdsView.isActive = true
         if !Defaults.bool(forKey: "adRemoved") {
+            
             if AdsManager.shared.arrNativeAds.count > 0
             {
                 self.arrNativeAds = AdsManager.shared.arrNativeAds[0]
                 self.loadNativeAds()
-            }else{
-                AdsManager.shared.createAndLoadNativeAds(numberOfAds: 1)
+                self.constNativeAdsView.isActive = false
             }
         }
         self.btnAddContact.layer.borderColor = UIColor(named: "themeColor")?.cgColor
@@ -118,10 +119,10 @@ extension DirectMessageVC
         self.ad_title.text = arrNativeAds?.headline
         self.ad_description.text = "\(arrNativeAds?.body ?? "")"
         
-        self.callToActionView.setTitle(arrNativeAds?.callToAction, for: .normal)
+        self.btncallToActionView.setTitle(arrNativeAds?.callToAction, for: .normal)
         self.nativeAdPlaceholder.isUserInteractionEnabled = false
         
-        self.nativeAdPlaceholder.callToActionView = self.callToActionView
+        self.nativeAdPlaceholder.callToActionView = self.btncallToActionView
         self.nativeAdPlaceholder.iconView = self.ad_icon
         self.nativeAdPlaceholder.headlineView = self.ad_title
         (self.nativeAdPlaceholder.bodyView as? UILabel)?.text = "\(arrNativeAds?.body ?? "")"
@@ -129,11 +130,11 @@ extension DirectMessageVC
         
         self.media_view.mediaContent = arrNativeAds?.mediaContent
         self.ad_icon.image = arrNativeAds?.icon?.image
-        self.ad_icon.isHidden = arrNativeAds?.icon == nil
-        
+        if arrNativeAds?.icon?.image == nil{
+            self.ad_icon.image = UIImage(named: "ic_ads")
+        }
         self.nativeAdPlaceholder.nativeAd = arrNativeAds
         self.nativeAdPlaceholder.isHidden = false
-        self.constNativeAdsView.constant = 250
     }
     
 }
